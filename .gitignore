@@ -1,0 +1,10 @@
+*.RDS
+*.csv
+*.pdf
+*.PDF
+
+
+*/documents/*
+*/text_as_datatable/*
+
+*.txt
