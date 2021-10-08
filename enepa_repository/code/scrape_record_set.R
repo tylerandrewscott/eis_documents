@@ -12,19 +12,19 @@ record_df = fread('input/epa_master_repository/eis_record_detail.csv',stringsAsF
 record_df = record_df %>% mutate_if(is.logical,as.character) %>% as.data.table()}
 
 base_page = 'https://cdxnodengn.epa.gov/cdx-enepa-public/action/eis/search'
-base_session = base_page %>% html_session()
+base_session = base_page %>% session()
 search_form = html_form(base_session)[[2]]
 search_form$fields$searchCriteria.onlyCommentLetters$value <- 'false'
 #search_form <- set_values(search_form,searchCriteria.states = state)
-search_session = submit_form(base_session,search_form)
+search_session = session_submit(base_session,search_form)
 hrefs = search_session %>% read_html() %>% html_nodes('a') %>% html_attr('href')
 last_page = max(as.numeric(gsub('p=','',str_extract(hrefs[duplicated(hrefs)],'p=[0-9]{1,}'))))
 print(last_page)
 p = 1
-next_link = which(search_session %>% read_html() %>% html_nodes('a') %>% html_text() == 'Last')[1]
-search_session = follow_link(search_session,i = next_link)
+next_link = which(search_session %>% read_html() %>% html_nodes('a') %>% html_text() == 'Next')[1]
+search_session = session_follow_link(search_session,i = next_link)
 
-search_session = rvest::jump_to(search_session,'?searchCritera.primaryStates=&d-446779-p=1&reset=Reset&searchCriteria.onlyCommentLetters=false')
+search_session = rvest::session_jump_to(search_session,'?searchCritera.primaryStates=&d-446779-p=1&reset=Reset&searchCriteria.onlyCommentLetters=false')
 p = as.numeric(str_extract(str_extract(search_session$url,'\\bp=[0-9]{1,}\\b'),'[0-9]{1,}'))
 
 keep_going = T
@@ -75,7 +75,7 @@ record_df <<- rbindlist(list(record_df,new_record),fill = T)
 #    record_df <- record_df[!duplicated(record_df),]
 #    break}
 #if(current_page!=last_page)
-search_session = follow_link(search_session,i = which(search_session %>% read_html() %>% html_nodes('a') %>% html_text() == 'Next')[1])
+search_session = session_follow_link(search_session,i = which(search_session %>% read_html() %>% html_nodes('a') %>% html_text() == 'Next')[1])
 p = as.numeric(str_extract(str_extract(search_session$url,'\\bp=[0-9]{1,}\\b'),'[0-9]{1,}'))
 #current_page = current_page + 1
 Sys.sleep(0.25)

@@ -4,6 +4,26 @@ if(!require(stringr)){install.packages('stringr');require(stringr)}
 if(!require(tidyverse)){install.packages('tidyverse');require(tidyverse)}
 if(!require(doParallel)){install.packages('doParallel');require(doParallel)}
 if(!require(pdftools)){install.packages('pdftools');require(pdftools)}
+if(!require(textclean)){install.packages('textclean');require(pdftools)}
+
+projects = fread('enepa_repository/meta_data/eis_record_detail.csv',colClasses = 'character')
+documents = fread('enepa_repository/meta_data/eis_document_record.csv',colClasses = 'character')
+
+flist = list.files('enepa_repository/text_as_datatable/',recursive = T,full.names = T)
+
+#flist = list.files('../../../Desktop/text_as_datatable/',recursive = T,full.names = T)
+base.file = basename(flist)
+
+eis_docs = documents
+eis_docs$FILE_LOC <- dirname(flist)[match(gsub('pdf$','txt',eis_docs$FILE_NAME),base.file)]
+
+
+#eis_docs[!file.exists(paste('../eis_documents/',eis_docs$FILE_LOC,eis_docs$FILE_NAME,sep = '/')),]
+have_pdf = eis_docs[file.exists(paste(eis_docs$FILE_LOC,gsub('pdf$','txt',eis_docs$FILE_NAME),sep = '/')),] 
+
+nms = colnames(fread(paste(have_pdf[1]$FILE_LOC,gsub('pdf$','txt',have_pdf$FILE_NAME[1]),sep = '/')))
+
+
 
 floc = 'enepa_repository/documents/'
 dir.create('enepa_repository/text_as_datatable')
@@ -28,10 +48,7 @@ library(lubridate)
 old = month(ymd_hms(finfo$mtime))!=5
 
 
-pdf_list = list.files('enepa_repository/documents/',recursive = T,full.names = T,pattern = '^2020|^201[3-9]|extra')
-
-
-
+pdf_list = list.files('enepa_repository/documents/',recursive = T,full.names = T,pattern = '^202[0-9]|^201[3-9]|extra')
 
 
 #pdf_list = pdf_list[grepl('^201[3-9]',basename(pdf_list))]
@@ -39,7 +56,7 @@ pdf_list = gsub('_{2,}','_',pdf_list)
 
 
 text_list = list.files('enepa_repository/text_as_datatable/',recursive = T,full.names = T)
-text_list = text_list[grepl('^2020|^201[3-9]',basename(text_list))]
+text_list = text_list[grepl('^202[0-9]|^201[3-9]',basename(text_list))]
 
 
 #docs_unconverted = doc_record[!file.exists(text_names),]

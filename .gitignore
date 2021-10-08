@@ -2,7 +2,7 @@
 *.pdf
 *.PDF
 
-
+*/corpus/*
 */documents/*
 */text_as_datatable/*
 

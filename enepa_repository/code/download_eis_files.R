@@ -3,6 +3,11 @@ library(stringr)
 library(tidyverse)
 library(httr)
 library(data.table)
+packs = c('rvest','stringr','tidyverse','httr','data.table','RCurl')
+sapply(packs[!packs %in% installed.packages()[,'Package']],install.packages)
+sapply(packs,require,character.only = T)
+
+
 
 file_storage = 'enepa_repository/documents/'
 record_df = fread('enepa_repository/meta_data/eis_record_detail.csv',stringsAsFactors = F)
@@ -34,9 +39,10 @@ current_flist = current_flist[not_empty]
 
 record_df$YEAR = str_extract(record_df$EIS.Number,'^[0-9]{4}')
 #record_df = record_df[YEAR %in% 2013:2019,]
-record_df = record_df[!EIS.Number %in% doc_df$EIS.Number,]
+dim(record_df[EIS.Number %in% doc_df$EIS.Number,])
+record_df = record_df[!EIS.Number %in% doc_df$EIS.Number & YEAR>2012,]
 
-for (i in 1:nrow(record_df))
+for (i in nrow(record_df):1)
 {
   Sys.sleep(0.25)
   print(record_df$EIS.Number[i])
