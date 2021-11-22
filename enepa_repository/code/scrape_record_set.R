@@ -11,7 +11,8 @@ if(file.exists('input/epa_master_repository/eis_record_detail.csv')){
 record_df = fread('input/epa_master_repository/eis_record_detail.csv',stringsAsFactors = F)
 record_df = record_df %>% mutate_if(is.logical,as.character) %>% as.data.table()}
 
-base_page = 'https://cdxnodengn.epa.gov/cdx-enepa-public/action/eis/search'
+base_page <- 'https://cdxnodengn.epa.gov/cdx-enepa-public/action/eis/search'
+base_page <- 'https://cdxapps.epa.gov/cdx-enepa-II/public/action/eis/search'
 base_session = base_page %>% session()
 search_form = html_form(base_session)[[2]]
 search_form$fields$searchCriteria.onlyCommentLetters$value <- 'false'
@@ -32,7 +33,7 @@ keep_going = T
 while(p < last_page & keep_going){
   print(p)
   new_record = {search_session %>% read_html() %>% html_table(trim=T)}[[1]]
-  new_record$eis_url = paste0('https://cdxnodengn.epa.gov',grep('details\\?eisId=[0-9]{1,}$',search_session%>% read_html() %>% html_nodes('a') %>% html_attr('href'),value=T))
+  new_record$eis_url = paste0('https://cdxapps.epa.gov',grep('details\\?eisId=[0-9]{1,}$',search_session%>% read_html() %>% html_nodes('a') %>% html_attr('href'),value=T))
   new_record <- data.table(new_record) 
   colnames(new_record) <- gsub('\\s','.',colnames(new_record))
   new_record[,Download.Documents:=NULL]
@@ -41,6 +42,7 @@ while(p < last_page & keep_going){
   if(nrow(new_record)>0){
   #if(nrow(new_record)==0){break}
   eis_info = lapply(seq_along(new_record$eis_url),function(x) {
+    new_record$eis_url[x]
   page = read_html(new_record$eis_url[x])
   i_name =  page %>% html_nodes(css = 'h4') %>% html_text(trim=T)
   i_value = page %>% html_nodes(css = '.form-item') %>% html_text(trim=T)

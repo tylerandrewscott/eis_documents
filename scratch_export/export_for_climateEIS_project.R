@@ -11,7 +11,9 @@ proj = proj[Document=='Draft',]
 proj = proj[str_extract(proj$EIS.Number,'^[0-9]{4}') %in% which_years,]
 
 docs = fread(grep('document',meta_files,value = T))
-docs = docs[EIS.Number %in% proj,]
+docs2 = fread(grep('extra',meta_files,value = T))
+docs = rbind(docs,docs2,use.names = T,fill = T)
+docs = docs[EIS.Number %in% proj$EIS.Number,]
 
 fwrite(docs,file = paste0('../tuolumne/climate_in_eis_project/input/deis_document_record.csv'))
 fwrite(proj,file = paste0('../tuolumne/climate_in_eis_project/input/deis_project_record.csv'))

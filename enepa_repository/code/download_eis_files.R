@@ -7,8 +7,6 @@ packs = c('rvest','stringr','tidyverse','httr','data.table','RCurl')
 sapply(packs[!packs %in% installed.packages()[,'Package']],install.packages)
 sapply(packs,require,character.only = T)
 
-
-
 file_storage = 'enepa_repository/documents/'
 record_df = fread('enepa_repository/meta_data/eis_record_detail.csv',stringsAsFactors = F)
 record_df = record_df %>% mutate_if(is.logical,as.character)
@@ -28,7 +26,8 @@ doc_df = data.table(EIS.Number = as.numeric(),Original_File_Name = as.character(
                     File_Name =as.character(),BAD_FILE =  logical(),PDF = logical(),stringsAsFactors = F)
 }
 
-base_page = 'https://cdxnodengn.epa.gov'
+base_page = 'https://cdxapps.epa.gov'
+
 
 finfo = file.info(paste0(file_storage,current_flist))
 not_empty = finfo$size>0
@@ -42,7 +41,10 @@ record_df$YEAR = str_extract(record_df$EIS.Number,'^[0-9]{4}')
 dim(record_df[EIS.Number %in% doc_df$EIS.Number,])
 record_df = record_df[!EIS.Number %in% doc_df$EIS.Number & YEAR>2012,]
 
-for (i in nrow(record_df):1)
+record_df[order(-EIS.Number),]
+20210176
+
+for (i in 1:nrow(record_df))
 {
   Sys.sleep(0.25)
   print(record_df$EIS.Number[i])
@@ -53,6 +55,7 @@ for (i in nrow(record_df):1)
   file_names = {htmlNodes %>% html_text()}[grepl('downloadAttachment',htmlNodes %>% html_attr('href'))]
   file_names = gsub('~|/','-',file_names)
   file_names = gsub('\\s{1,}','_',file_names)
+  file_names = gsub('PDF$','pdf',file_names)
   if(length(file_url)==0){next}
   for (j in 1:length(file_url)){
     subd = str_extract(record_df$EIS.Number[i],'^[0-9]{4}')
@@ -62,6 +65,7 @@ for (i in nrow(record_df):1)
     }
     if(!file.exists(paste0(file_storage,subd,'/',paste(record_df$EIS.Number[i],file_names[j],sep='_')))){
         temp_name = paste0(file_storage,subd,'/',paste(record_df$EIS.Number[i],file_names[j],sep='_'))
+        temp_name <- gsub('PDF$','pdf',temp_name)
         download = tryCatch(httr::GET(paste0(base_page,file_url[j]), verbose(),write_disk(temp_name), overwrite=TRUE),error=function(e) NULL)
         temp_info = file.info(temp_name)
       if(is.null(download)){

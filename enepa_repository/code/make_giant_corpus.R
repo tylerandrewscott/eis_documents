@@ -20,8 +20,7 @@ for(corpus_name in corpus_year_files){
 
 
 for(corp in corpus_year_files){
-  print(corp)
-  temp = fread(corp,sep ='\t',select = 'File')
+  temp = fread(corp,sep = '\t')
   yr = str_extract(corp,'[0-9]{4}')
   temp_flist = flist[flist_year==yr]
   temp_flist = temp_flist[!basename(temp_flist) %in% temp$File]
