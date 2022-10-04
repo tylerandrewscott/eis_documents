@@ -11,7 +11,7 @@ if(file.exists('input/epa_master_repository/eis_record_detail.csv')){
 record_df = fread('input/epa_master_repository/eis_record_detail.csv',stringsAsFactors = F)
 record_df = record_df %>% mutate_if(is.logical,as.character) %>% as.data.table()}
 
-base_page <- 'https://cdxnodengn.epa.gov/cdx-enepa-public/action/eis/search'
+#base_page <- 'https://cdxnodengn.epa.gov/cdx-enepa-public/action/eis/search'
 base_page <- 'https://cdxapps.epa.gov/cdx-enepa-II/public/action/eis/search'
 base_session = base_page %>% session()
 search_form = html_form(base_session)[[2]]
@@ -87,6 +87,5 @@ Sys.sleep(0.25)
 }
 
 fwrite(x = record_df,file = fname,row.names = F)
-
 
 

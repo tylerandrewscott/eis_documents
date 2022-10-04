@@ -38,14 +38,16 @@ current_flist = current_flist[not_empty]
 
 record_df$YEAR = str_extract(record_df$EIS.Number,'^[0-9]{4}')
 #record_df = record_df[YEAR %in% 2013:2019,]
-dim(record_df[EIS.Number %in% doc_df$EIS.Number,])
-record_df = record_df[!EIS.Number %in% doc_df$EIS.Number & YEAR>2012,]
+
+fls <- list.files('enepa_repository/documents/',recursive = T)
+check_projs <- unique(str_extract(doc_df$File_Name[!doc_df$File_Name %in% basename(fls)],'^[0-9]{8}'))
+
+record_df = record_df[({!EIS.Number %in% doc_df$EIS.Number} | EIS.Number %in% check_projs) & YEAR>2012,]
 
 record_df[order(-EIS.Number),]
-20210176
 
-for (i in 1:nrow(record_df))
-{
+
+for (i in 1:nrow(record_df)){
   Sys.sleep(0.25)
   print(record_df$EIS.Number[i])
   try = RCurl::getURL(record_df$eis_url[i])

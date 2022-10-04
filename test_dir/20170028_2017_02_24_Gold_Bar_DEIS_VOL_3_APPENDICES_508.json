@@ -1,0 +1,293 @@
+[
+  {
+    "author": [
+      {
+        "family": "Land Management",
+        "given": "Bureau",
+        "particle": "of"
+      }
+    ],
+    "date": [
+      "2009"
+    ],
+    "title": [
+      "Integrated Weed Management Plan, Battle Mountain District, Mt. Lewis Field Office and Tonopah Field Office"
+    ],
+    "location": [
+      "Battle Mountain District, Battle Mountain, Nevada"
+    ],
+    "type": null
+  },
+  {
+    "author": [
+      {
+        "family": "Land Management",
+        "given": "Bureau",
+        "particle": "of"
+      }
+    ],
+    "date": [
+      "2015",
+      "2015-09"
+    ],
+    "title": [
+      "Record of Decision and Approved Resource Management Plan Amendments for the Great Basin Region, Including the Greater Sagegrouse Sub Regions of Idaho and Southwestern Montana, Nevada and Northeastern California, Oregon, and Utah"
+    ],
+    "publisher": [
+      "USDI, Bureau of Land Management"
+    ],
+    "location": [
+      "Washington D.C"
+    ],
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Land Management",
+        "given": "Bureau",
+        "particle": "of"
+      }
+    ],
+    "date": [
+      "2015",
+      "2015-09"
+    ],
+    "title": [
+      "Nevada and Northeastern California Greater SageGrouse Approved Resource Management Plant Amendment"
+    ],
+    "publisher": [
+      "USDI, BLM, Nevada State Office"
+    ],
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Land Management",
+        "given": "Bureau",
+        "particle": "of"
+      }
+    ],
+    "date": [
+      "2016"
+    ],
+    "title": [
+      "3 Bars Ecosystem and Landscape Restoration Project"
+    ],
+    "volume": [
+      "Volumes 1 and 2"
+    ],
+    "pages": [
+      "– – 16–07 1793"
+    ],
+    "type": "article-journal",
+    "container-title": [
+      "Final Environmental Impact Statement"
+    ]
+  },
+  {
+    "date": [
+      "2016-10"
+    ],
+    "publisher": [
+      "Mount Lewis Field Office"
+    ],
+    "location": [
+      "Battle Mountain, Nevada"
+    ],
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Land Management",
+        "given": "Bureau",
+        "particle": "of"
+      }
+    ],
+    "title": [
+      "2016b"
+    ],
+    "date": [
+      "1794-12-01"
+    ],
+    "type": "article-journal",
+    "container-title": [
+      "Mitigation Handbook"
+    ]
+  },
+  {
+    "author": [
+      {
+        "family": "Elzinga",
+        "given": "C.L."
+      },
+      {
+        "family": "Salzer",
+        "given": "D.W."
+      },
+      {
+        "family": "Willoughby",
+        "given": "J.W."
+      }
+    ],
+    "date": [
+      "1998"
+    ],
+    "publisher": [
+      "Measuring & Monitoring Plant Populations"
+    ],
+    "type": "book"
+  },
+  {
+    "title": [
+      "BLM Technical Reference 1730-1"
+    ],
+    "publisher": [
+      "BLM/RS/ST-98/005+1730"
+    ],
+    "location": [
+      "Denver, Colorado"
+    ],
+    "type": "book"
+  },
+  {
+    "author": [
+      {
+        "family": "Ecology",
+        "given": "Great Basin"
+      },
+      {
+        "given": "Inc"
+      }
+    ],
+    "date": [
+      "2013"
+    ],
+    "title": [
+      "Gold Bar Project Biological Baseline Inventory"
+    ],
+    "note": [
+      "Report prepared for McEwen Mining, Inc., Gold Bar Project. Revised July 2013."
+    ],
+    "type": "report"
+  },
+  {
+    "author": [
+      {
+        "family": "Brennan",
+        "given": "J.C."
+      },
+      {
+        "family": "Associates",
+        "given": "Inc"
+      }
+    ],
+    "date": [
+      "2016"
+    ],
+    "note": [
+      "Gold Bar Baseline Noise Report and Predicted Mining Noise Levels. September 2016."
+    ],
+    "type": "report"
+  },
+  {
+    "author": [
+      {
+        "family": "Stiver",
+        "given": "S.J."
+      },
+      {
+        "family": "Rinkes",
+        "given": "E.T."
+      },
+      {
+        "family": "Naugle",
+        "given": "D.E."
+      },
+      {
+        "family": "Makela",
+        "given": "P.D."
+      },
+      {
+        "family": "Nance",
+        "given": "D.A."
+      },
+      {
+        "family": "Karl",
+        "given": "J.W."
+      }
+    ],
+    "date": [
+      "2015"
+    ],
+    "title": [
+      "Sage-Grouse Habitat Assessment Framework: A Multiscale Assessment Tool"
+    ],
+    "container-title": [
+      "Technical Reference 67101. Bureau of Land Management and Western Association of Fish and Wildlife Agencies"
+    ],
+    "location": [
+      "Denver, Colorado"
+    ],
+    "type": "chapter"
+  },
+  {
+    "title": [
+      "United States Department of Agriculture, Natural Resource Conservation Service, and United States Department of the Interior",
+      "Sampling Vegetation Attributes"
+    ],
+    "date": [
+      "1999"
+    ],
+    "container-title": [
+      "BLM Technical Reference 1734-4. BLM/RS/ST-96/002+1730. National Applied Resource Sciences"
+    ],
+    "location": [
+      "Center, Denver, Colorado"
+    ],
+    "note": [
+      "Available online at:"
+    ],
+    "url": [
+      "https://www.blm.gov/nstc/library/pdf/samplveg.pdf"
+    ],
+    "type": "chapter"
+  },
+  {
+    "author": [
+      {
+        "family": "Fish",
+        "given": "United States"
+      },
+      {
+        "family": "Service",
+        "given": "Wildlife"
+      }
+    ],
+    "date": [
+      "2014",
+      "2014"
+    ],
+    "title": [
+      "Greater Sage-Grouse Range-Wide Mitigation Framework"
+    ],
+    "volume": [
+      "1"
+    ],
+    "type": "article-journal",
+    "container-title": [
+      "Version"
+    ],
+    "issue": [
+      "0"
+    ]
+  },
+  {
+    "title": [
+      "Greater Sage-grouse Mitigation Plan – Gold Bar Mine Project McEwen Mining Inc"
+    ],
+    "type": null
+  }
+]
