@@ -13,6 +13,9 @@ txt_files = list.files('enepa_repository/text_as_datatable/',full.names = T,recu
 
 still_need = documents[!gsub('pdf$','txt',documents$File_Name) %in% basename(txt_files),]
 
+dr <- list.dirs('enepa_repository/documents')
+dr2 <- gsub('documents','text_as_datatable',dr)
+sapply(dr2[!dir.exists(dr2)],dir.create)
 
 for(i in nrow(still_need):1){
   pdf_name = grep(still_need$File_Name[i],pdf_files,value = T)
