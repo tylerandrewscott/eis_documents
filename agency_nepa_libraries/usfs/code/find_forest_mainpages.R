@@ -79,7 +79,7 @@ Sys.sleep(5) # give the binary a moment
 remDr <- remoteDriver(port=port)
 remDr$open()
 remDr$navigate(base)
-
+base
 nf_options = remDr$findElement(using = 'name','forest')
 options = nf_options$selectTag()
 
