@@ -2,7 +2,7 @@
 Code to scrape and store NEPA documents
 
 ## content
-There are two main subdirectorys:
+There are two main subdirectories:
 /enepa_repository, which relates to the EPA's https://cdxapps.epa.gov/cdx-enepa-II/public/action/eis/search webpage containing a record of EISs filed w/ the EPA since October, 2012
 /agency_nepa_libraries, which contain agency-specific records for some agencies that maintain NEPA records
 
@@ -20,5 +20,6 @@ Github is designed for code--many NEPA documents are large. This respository is 
  
  ## public access
  You can also access current versions of the document corpuses here (caveat emptor!)
+ 
   https://ucdavis.box.com/v/agency-nepa-repositories
   https://ucdavis.box.com/v/enepa-repository
