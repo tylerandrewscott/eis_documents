@@ -8,14 +8,14 @@ sapply(packs[!packs %in% installed.packages()[,'Package']],install.packages)
 sapply(packs,require,character.only = T)
 
 file_storage = 'enepa_repository/documents/'
-record_df = fread('enepa_repository/meta_data/eis_record_detail.csv',stringsAsFactors = F)
+record_df = fread('enepa_repository/metadata/eis_record_detail.csv',stringsAsFactors = F)
 record_df = record_df %>% mutate_if(is.logical,as.character)
 record_df = data.table(record_df)
 record_df = record_df[order(-EIS.Number)]
 
 rerunALL = FALSE
 if(!rerunALL){
-docs = fread('enepa_repository/meta_data/eis_document_record.csv',stringsAsFactors = F)
+docs = fread('enepa_repository/metadata/eis_document_record.csv',stringsAsFactors = F)
 current_flist = list.files(file_storage,recursive = T)
 docs$YEAR = str_extract(docs$EIS.Number,'^[0-9]{4}')
 docs = docs[YEAR>=2012,]
@@ -94,7 +94,7 @@ for (i in 1:nrow(record_df)){
   }
 }
 
-write.csv(x = doc_df,file = paste0('enepa_repository/meta_data/eis_document_record','.csv'),row.names = F)
+write.csv(x = doc_df,file = paste0('enepa_repository/metadata/eis_document_record','.csv'),row.names = F)
 
 
 # 

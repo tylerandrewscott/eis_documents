@@ -3,13 +3,14 @@ library(stringr)
 library(tidyverse)
 library(data.table)
 require(rvest)
-fname = 'enepa_repository/meta_data/eis_record_detail.csv'
-if(file.exists(fname)){
-  record_df = fread(fname)}else{record_df = data.table(stringsAsFactors = F)}
+fname = 'enepa_repository/metadata/eis_record_detail.rds'
 
-if(file.exists('input/epa_master_repository/eis_record_detail.csv')){
-record_df = fread('input/epa_master_repository/eis_record_detail.csv',stringsAsFactors = F)
-record_df = record_df %>% mutate_if(is.logical,as.character) %>% as.data.table()}
+if(file.exists(fname)){
+  record_df = readRDS(fname)}else{record_df = data.table(stringsAsFactors = F)}
+# 
+# if(file.exists('input/epa_master_repository/eis_record_detail.csv')){
+# record_df = fread('input/epa_master_repository/eis_record_detail.csv',stringsAsFactors = F)
+# record_df = record_df %>% mutate_if(is.logical,as.character) %>% as.data.table()}
 
 #base_page <- 'https://cdxnodengn.epa.gov/cdx-enepa-public/action/eis/search'
 base_page <- 'https://cdxapps.epa.gov/cdx-enepa-II/public/action/eis/search'
@@ -86,6 +87,6 @@ Sys.sleep(0.25)
 #
 }
 
-fwrite(x = record_df,file = fname,row.names = F)
+saveRDS(object = record_df,file = fname)
 
 
