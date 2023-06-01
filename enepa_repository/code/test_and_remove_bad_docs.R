@@ -4,7 +4,7 @@ library(tidyverse)
 
 
 flist <- list.files('enepa_repository/documents/',full.names = T,recursive = T)
-frecord <- fread('enepa_repository/metadata/eis_document_record.csv')
+frecord <- readRDS('enepa_repository/metadata/eis_document_record.rds')
 
 flist <- flist[grepl('pdf$|PDF$',flist)]
 

@@ -6,8 +6,8 @@ if(!require(doParallel)){install.packages('doParallel');require(doParallel)}
 if(!require(pdftools)){install.packages('pdftools');require(pdftools)}
 if(!require(textclean)){install.packages('textclean');require(textclean)}
 
-projects = fread('enepa_repository/metadata/eis_record_detail.csv',colClasses = 'character')
-documents = fread('enepa_repository/metadata/eis_document_record.csv',colClasses = 'character')
+projects = readRDS('enepa_repository/metadata/eis_record_detail.rds')
+documents = readRDS('enepa_repository/metadata/eis_document_record.rds')
 pdf_files = list.files('enepa_repository/documents/',full.names = T,recursive = T)
 txt_files = list.files('enepa_repository/text_as_datatable/',full.names = T,recursive = T)
 
@@ -17,7 +17,7 @@ dr <- list.dirs('enepa_repository/documents')
 dr2 <- gsub('documents','text_as_datatable',dr)
 sapply(dr2[!dir.exists(dr2)],dir.create)
 
-for(i in nrow(still_need):1){
+for(i in 1:nrow(still_need)){
   pdf_name = grep(still_need$File_Name[i],pdf_files,value = T)
   print(pdf_name)
   text_name = gsub('enepa_repository/documents','enepa_repository/text_as_datatable',pdf_name,fixed = T)
