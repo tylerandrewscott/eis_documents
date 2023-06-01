@@ -3,6 +3,7 @@ library(stringr)
 library(tidyverse)
 library(data.table)
 require(rvest)
+<<<<<<< Updated upstream
 fname = 'enepa_repository/metadata/eis_record_detail.rds'
 
 if(file.exists(fname)){
@@ -12,6 +13,12 @@ if(file.exists(fname)){
 # record_df = fread('input/epa_master_repository/eis_record_detail.csv',stringsAsFactors = F)
 # record_df = record_df %>% mutate_if(is.logical,as.character) %>% as.data.table()}
 
+=======
+fname = 'enepa_repository/metadata/eis_record_detail.csv'
+if(file.exists(fname)){
+  record_df = fread(fname)}else{record_df = data.table(stringsAsFactors = F)}
+
+>>>>>>> Stashed changes
 #base_page <- 'https://cdxnodengn.epa.gov/cdx-enepa-public/action/eis/search'
 base_page <- 'https://cdxapps.epa.gov/cdx-enepa-II/public/action/eis/search'
 base_session = base_page %>% session()
@@ -31,6 +38,9 @@ p = as.numeric(str_extract(str_extract(search_session$url,'\\bp=[0-9]{1,}\\b'),'
 
 keep_going = T
 
+search_session = rvest::session_jump_to(search_session,'?searchCritera.primaryStates=&d-446779-p=137&reset=Reset&searchCriteria.onlyCommentLetters=false')
+p = 137
+#while(p < last_page & keep_going){
 while(p < last_page & keep_going){
   print(p)
   new_record = {search_session %>% read_html() %>% html_table(trim=T)}[[1]]
@@ -39,6 +49,9 @@ while(p < last_page & keep_going){
   colnames(new_record) <- gsub('\\s','.',colnames(new_record))
   new_record[,Download.Documents:=NULL]
   new_record = new_record[!paste(Title,Federal.Register.Date) %in% paste(record_df$Title,record_df$Federal.Register.Date),]
+  new_record$Title <- enc2utf8(new_record$Title)
+  new_record$Title <- iconv(new_record$Title, "UTF-8", "UTF-8",sub='')
+  new_record$Title <- str_remove_all(new_record$Title,'\\\"')
   if(nrow(new_record)==0){keep_going <<-FALSE}
   if(nrow(new_record)>0){
   #if(nrow(new_record)==0){break}
@@ -53,6 +66,12 @@ while(p < last_page & keep_going){
   entry = data.frame(do.call(cbind,sapply(entry,function(x) gsub('^ ','',unlist(x)),simplify = F)),stringsAsFactors = F)
   entry})
 eis_info_df = rbindlist(eis_info,fill = T)
+#eis_info_df$EIS.Title <- str_remove_all(eis_info_df$EIS.Title,'[^[:alnum:] ]')
+
+eis_info_df$EIS.Title <- enc2utf8(eis_info_df$EIS.Title)
+eis_info_df$EIS.Title <- iconv(eis_info_df$EIS.Title, "UTF-8", "UTF-8",sub='')
+eis_info_df$EIS.Title <- str_remove_all(eis_info_df$EIS.Title,'\\\"')
+
 eis_info_df$State.or.Territory <- stringr::str_replace_all(eis_info_df$State.or.Territory, "[\r\t\n]|\\s", "")
 eis_info_df$EIS.Comment.Due..Review.Period.Date <- stringr::str_replace_all(eis_info_df$EIS.Comment.Due..Review.Period.Date, "[\r\t\n]|\\s", "")
 eis_info_df$Federal.Register.Date <- stringr::str_replace_all(eis_info_df$Federal.Register.Date, "[\r\t\n]|\\s", "")
@@ -71,8 +90,7 @@ new_record[new_record==''] <- NA
 new_record = new_record %>% mutate_if(is.logical,as.character)
 new_record = data.table(new_record)
 
-if(all(new_record$EIS.Number %in% record_df$EIS.Number)){keep_going <<- F}
-else{
+if(all(new_record$EIS.Number %in% record_df$EIS.Number)){keep_going <<- F}else{
 record_df <<- rbindlist(list(record_df,new_record),fill = T)
 #if(any(duplicated(record_df))){
 #    record_df <- record_df[!duplicated(record_df),]

@@ -13,15 +13,32 @@ require(seleniumPipes)
 library(data.table)
 library(RSelenium)
 
+
 project_record_file = 'agency_nepa_libraries/blm/metadata/new_project_record.csv'
+project_record_file = 'agency_nepa_libraries/blm/metadata/project_record.csv'
+t1 <- fread(project_record_file)
+t2 <- fread(project_record_file2)
+
 if(file.exists(project_record_file)){precord = fread(project_record_file)}else{precord = data.table()}
+
 
 
 remDr <- RSelenium::remoteDriver(remoteServerAddr = "localhost",
                                  port = 4445L,
                                  browserName = "chrome")
 remDr$open()
+
+https://eplanning.blm.gov/eplanning-ws/epl/ref/getStateCodes
+https://eplanning.blm.gov/eplanning-ws/epl/ref/getFiscalYears
+
+https://eplanning.blm.gov/eplanning-ui/search?filterSearch=%7B%22states%22:null,%22projectTypes%22:%5B8%5D,%22programs%22:null,%22years%22:null,%22open%22:false,%22active%22:false%7D
+
+
 start = 'https://eplanning.blm.gov/eplanning-ui/home'
+sess<-session(start)
+fm<-html_form(sess)
+read_
+
 remDr$navigate(start)
 # 
 # state_selector = remDr$findElement('id','filter-states')
