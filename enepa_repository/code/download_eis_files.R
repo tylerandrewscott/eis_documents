@@ -3,7 +3,7 @@ library(stringr)
 library(tidyverse)
 library(httr)
 library(data.table)
-rerunALL = T
+rerunALL = F
 
 packs = c('rvest','stringr','tidyverse','httr','data.table','RCurl')
 sapply(packs[!packs %in% installed.packages()[,'Package']],install.packages)

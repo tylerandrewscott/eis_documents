@@ -16,7 +16,7 @@ still_need = documents[!gsub('pdf$','txt',documents$File_Name) %in% basename(txt
 dr <- list.dirs('enepa_repository/documents')
 dr2 <- gsub('documents','text_as_datatable',dr)
 sapply(dr2[!dir.exists(dr2)],dir.create)
-
+still_need <- still_need[order(-EIS.Number),]
 for(i in 1:nrow(still_need)){
   pdf_name = grep(still_need$File_Name[i],pdf_files,value = T)
   print(pdf_name)

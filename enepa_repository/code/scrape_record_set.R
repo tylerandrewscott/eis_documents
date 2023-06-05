@@ -5,7 +5,7 @@ library(data.table)
 require(rvest)
 
 fname = 'enepa_repository/metadata/eis_record_detail.rds'
-recheck = T
+recheck = F
 if(file.exists(fname)){
   record_df = readRDS(fname)}else{record_df = data.table(stringsAsFactors = F)}
 # 
@@ -30,7 +30,7 @@ search_session = session_follow_link(search_session,i = next_link)
 
 p = 1
 keep_going = T
-
+page_set <- 1:last_page
 #search_session = rvest::session_jump_to(search_session,'?searchCritera.primaryStates=&d-446779-p=137&reset=Reset&searchCriteria.onlyCommentLetters=false')
 
 #while(p < last_page & keep_going){
