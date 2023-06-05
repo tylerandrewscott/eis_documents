@@ -9,6 +9,7 @@ recheck = T
 if(file.exists(fname)){
   record_df = readRDS(fname)}else{record_df = data.table(stringsAsFactors = F)}
 # 
+
 # if(file.exists('input/epa_master_repository/eis_record_detail.csv')){
 # record_df = fread('input/epa_master_repository/eis_record_detail.csv',stringsAsFactors = F)
 # record_df = record_df %>% mutate_if(is.logical,as.character) %>% as.data.table()}
@@ -31,7 +32,6 @@ p = 1
 keep_going = T
 
 #search_session = rvest::session_jump_to(search_session,'?searchCritera.primaryStates=&d-446779-p=137&reset=Reset&searchCriteria.onlyCommentLetters=false')
-page_set <- 1:last_page
 
 #while(p < last_page & keep_going){
 while(keep_going & length(page_set)>0 & p %in% page_set){
@@ -46,8 +46,8 @@ while(keep_going & length(page_set)>0 & p %in% page_set){
   new_record$Title <- enc2utf8(new_record$Title)
   new_record$Title <- iconv(new_record$Title, "UTF-8", "UTF-8",sub='')
   new_record$Title <- str_remove_all(new_record$Title,'\\\"')
-  already_have <- all(new_record$EIS.Number %in% record_df$EIS.Number)
   new_record = new_record[!paste(Title,Federal.Register.Date) %in% paste(record_df$Title,record_df$Federal.Register.Date),]
+
   if(nrow(new_record)==0&!recheck){keep_going <<-FALSE}
   else if(nrow(new_record)==0&recheck){page_set <<- page_set[!page_set %in% p];p <- page_set[1];Sys.sleep(0.25);next}
   else{
