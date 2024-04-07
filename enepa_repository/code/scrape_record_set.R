@@ -4,6 +4,12 @@ library(tidyverse)
 library(data.table)
 require(rvest)
 
+#### they changed the site so it gets wonky if it you just click search with no parameters
+### so easiest to use dates. right now, since it's pretty updated, easiest thing is just to plug in the year
+### would have to be updated to iterate through more years
+
+year = 2024
+
 fname = 'enepa_repository/metadata/eis_record_detail.rds'
 recheck = F
 if(file.exists(fname)){
@@ -19,10 +25,15 @@ base_page <- 'https://cdxapps.epa.gov/cdx-enepa-II/public/action/eis/search'
 base_session = base_page %>% session()
 search_form = html_form(base_session)[[2]]
 search_form$fields$searchCriteria.onlyCommentLetters$value <- 'false'
+
+
+search_form$fields$searchCriteria.startFRDate$value <- paste0('01/01/',year)
+search_form$fields$searchCriteria.endFRDate$value <- paste0('12/31/',year)
+
 #search_form <- set_values(search_form,searchCriteria.states = state)
-search_session = session_submit(base_session,search_form)
+search_session = session_submit(base_session,search_form,submit = 'searchRecords')
 hrefs = search_session %>% read_html() %>% html_nodes('a') %>% html_attr('href')
-last_page = max(as.numeric(gsub('p=','',str_extract(hrefs[duplicated(hrefs)],'p=[0-9]{1,}'))))
+last_page = max(as.numeric(gsub('p=','',str_extract(hrefs[duplicated(hrefs)],'p=[0-9]{1,}'))),na.rm = T)
 print(last_page)
 
 next_link = which(search_session %>% read_html() %>% html_nodes('a') %>% html_text() == 'Next')[1]
