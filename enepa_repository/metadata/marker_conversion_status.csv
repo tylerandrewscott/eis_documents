@@ -1,0 +1,19 @@
+ceqNumber,attachmentId,source_file,output_file,converted,ocr_used,error,timestamp
+20250186,544805,/Users/admin-tascott/Documents/GitHub/eis_documents/enepa_repository/documents/2025/20250186_LoMo_FRR_Comprehensive_Study_Draft_Report.pdf,,False,False,Timeout (>10 minutes),2026-02-02T14:16:11.648582
+20250186,544810,/Users/admin-tascott/Documents/GitHub/eis_documents/enepa_repository/documents/2025/20250186_LoMo_System_Plan_-_Basis_of_Estimate.pdf,,False,False,Timeout (>10 minutes),2026-02-02T14:26:11.995587
+20250186,544815,/Users/admin-tascott/Documents/GitHub/eis_documents/enepa_repository/documents/2025/20250186_Appendix_A.1_LoMo_FRM_Past_Performance_Assessment.pdf,,False,False,Timeout (>10 minutes),2026-02-02T14:36:12.218716
+20250186,544820,/Users/admin-tascott/Documents/GitHub/eis_documents/enepa_repository/documents/2025/20250186_Appendix_A.2.1_LoMo_RAS_Calibration_Omaha_District_Reach.pdf,,False,False,Timeout (>10 minutes),2026-02-02T14:46:12.466659
+20250186,545125,/Users/admin-tascott/Documents/GitHub/eis_documents/enepa_repository/documents/2025/20250186_Appendix_A.2.2_LoMo_RAS_Calibration_Kansas_City_District_Reach.pdf,,False,False,Timeout (>10 minutes),2026-02-02T14:56:12.766252
+20250186,545130,/Users/admin-tascott/Documents/GitHub/eis_documents/enepa_repository/documents/2025/20250186_Appendix_A.3_Attachment_Modeling_Alternative_and_Results.pdf,,False,True,"2026-02-02 14:56:23,097 [WARNING] surya: `TableRecEncoderDecoderModel` is not compatible with mps backend. Defaulting to cpu instead
+Traceback (most recent call last):
+  File ""/opt/anaconda3/bin/marker_single"", line 8, in <module>
+    sys.exit(convert_single_cli())
+             ^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python3.11/site-packages/click/core.py"", line 1485, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/opt/anaconda3/lib/python",2026-02-02T14:56:24.488226
+20250186,545135,/Users/admin-tascott/Documents/GitHub/eis_documents/enepa_repository/documents/2025/20250186_APPENDIX_A.3_Modeling_Alternatives_and_Results.pdf,,False,False,Timeout (>10 minutes),2026-02-02T15:06:24.766521
+20250186,545140,/Users/admin-tascott/Documents/GitHub/eis_documents/enepa_repository/documents/2025/20250186_APPENDIX_A.4_Resiliency.pdf,/Users/admin-tascott/Documents/GitHub/eis_documents/enepa_repository/marker_conversions/2025/20250186_APPENDIX_A.4_Resiliency.md,True,False,,2026-02-02T15:15:41.013901
+20250186,545145,/Users/admin-tascott/Documents/GitHub/eis_documents/enepa_repository/documents/2025/20250186_APPENDIX_B_Cost.pdf,/Users/admin-tascott/Documents/GitHub/eis_documents/enepa_repository/marker_conversions/2025/20250186_APPENDIX_B_Cost.md,True,False,,2026-02-02T15:18:12.719929
+20250186,545150,/Users/admin-tascott/Documents/GitHub/eis_documents/enepa_repository/documents/2025/20250186_APPENDIX_C_Environmental.pdf,,False,False,Timeout (>10 minutes),2026-02-02T15:28:12.949898
