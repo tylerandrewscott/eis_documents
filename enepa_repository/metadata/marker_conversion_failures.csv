@@ -1,0 +1,5 @@
+attachmentId,ceqNumber,source_file,error,timestamp
+286345,20190296,"/Users/admin-tascott/Documents/GitHub/eis_documents/enepa_repository/documents/2019/20190296_Butterfield_Sentinel_Draft_EIR-EIS_2018.pdf","Chunk 1/11 failed: Timeout after 300s",2026-02-05T22:41:34.482844
+286348,20190296,"/Users/admin-tascott/Documents/GitHub/eis_documents/enepa_repository/documents/2019/20190296_Butterfield_Sentinel_Draft_EIR-EIS_Appendix_A_-_Public_Scoping_Process.pdf","Chunk 1/13 failed: Timeout after 300s",2026-02-05T22:51:22.412450
+286350,20190296,"/Users/admin-tascott/Documents/GitHub/eis_documents/enepa_repository/documents/2019/20190296_Butterfield_Sentinel_Draft_EIR-EIS_Appendix_C_-_Plan_of_Operation-Reclamation_Part_1.pdf","Chunk 1/139 failed: Timeout after 300s",2026-02-05T22:56:23.448133
+286353,20190296,"/Users/admin-tascott/Documents/GitHub/eis_documents/enepa_repository/documents/2019/20190296_Butterfield_Sentinel_Draft_EIR-EIS_Appendix_E_-_Air_Quality_Greenhouse_Gases.pdf","Chunk 1/43 failed: Timeout after 300s",2026-02-05T23:01:44.112429
