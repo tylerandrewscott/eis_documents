@@ -5,7 +5,9 @@
 */corpus/*
 */documents/*
 */text_as_datatable/*
-
+*/marker_conversions/*
 *.txt
 .Rproj.user
 **/.DS_Store
+*.md
+*.md
