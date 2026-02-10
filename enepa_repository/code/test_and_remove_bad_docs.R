@@ -3,7 +3,7 @@ library(data.table)
 library(tidyverse)
 
 
-flist <- list.files('enepa_repository/documents/',full.names = T,recursive = T)
+flist <- list.files('enepa_repository/box_files/documents/',full.names = T,recursive = T)
 frecord <- readRDS('enepa_repository/metadata/eis_document_record.rds')
 
 flist <- flist[grepl('pdf$|PDF$',flist)]

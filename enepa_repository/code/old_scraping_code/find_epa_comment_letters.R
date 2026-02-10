@@ -11,7 +11,7 @@ packs = c('rvest','stringr','tidyverse','httr','data.table','RCurl')
 sapply(packs[!packs %in% installed.packages()[,'Package']],install.packages)
 sapply(packs,require,character.only = T)
 
-file_storage = 'enepa_repository/documents/'
+file_storage = 'enepa_repository/box_files/documents/'
 doc_file_name <- 'enepa_repository/metadata/eis_document_record.rds'
 record_df = readRDS('enepa_repository/metadata/eis_record_detail.rds')
 
@@ -36,7 +36,7 @@ not_empty = finfo$size>0
 
 #record_df = record_df[YEAR %in% 2013:2019,]
 library(pbapply)
-fls <- list.files('enepa_repository/documents/',recursive = T)
+fls <- list.files('enepa_repository/box_files/documents/',recursive = T)
 
 
 
@@ -69,23 +69,23 @@ saveRDS(epas,file = 'enepa_repository/metadata/epa_comment_record.RDS')
 
 
 epas <- readRDS('enepa_repository/metadata/epa_comment_record.RDS')
-tx <- list.files('enepa_repository/text_as_datatable/',recursive = T)
+tx <- list.files('enepa_repository/box_files/text_as_datatable/',recursive = T)
 
 library(pdftools)
-pd <- list.files('enepa_repository/documents/',recursive = T)
+pd <- list.files('enepa_repository/box_files/documents/',recursive = T)
 letters <- pd[basename(pd) %in% epas$File_Name]
-storage_loc <- 'enepa_repository/documents/'
+storage_loc <- 'enepa_repository/box_files/documents/'
 
 library(imagefx)
 library(jpeg)
 
-have <- list.files('enepa_repository/epa_comment_letters/')
+have <- list.files('enepa_repository/box_files/epa_comment_letters/')
 
 for(p in letters){
   print(p)
   full_name <- paste0(storage_loc,p)
   new_name <- str_replace(basename(full_name),'pdf$','txt')
-  new_con <- paste0('enepa_repository/epa_comment_letters/',new_name)
+  new_con <- paste0('enepa_repository/box_files/epa_comment_letters/',new_name)
   if(!file.exists(new_con)){
     oc <- tryCatch(pdf_ocr_text(full_name),error = function(e) NULL)
     if(!is.null(oc)){writeLines(text = oc,con = new_con)}

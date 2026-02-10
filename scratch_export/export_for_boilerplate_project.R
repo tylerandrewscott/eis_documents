@@ -28,7 +28,7 @@ fwrite(epa,'../tuolumne/boilerplate_project/input/feis_record_detail.csv')
 good_string = 'PREPARERS|CONTRIBUTORS|Preparers|Contributors|Consultants|Interdisciplinary Team'#LIST OF PREPARERS|List of Preparers|List Of Preparers|PREPARERS AND CONTRIBUTORS|Preparers and Contributors|Preparers \\& Contributors|Preparers And Contributors'
 bad_string = 'TABLE OF CONTENTS|Table of Contents|^CONTENTS|Contents|How to Use This Document|Date Received'
 
-tfiles = list.files('enepa_repository/text_as_datatable/',full.names = T,recursive = T)
+tfiles = list.files('enepa_repository/box_files/text_as_datatable/',full.names = T,recursive = T)
 split_by_proj = split(tfiles,str_extract(basename(tfiles),'^[0-9]{8}'))
 
 split_by_proj <- split_by_proj[names(split_by_proj) %in% epa$EIS.Number]

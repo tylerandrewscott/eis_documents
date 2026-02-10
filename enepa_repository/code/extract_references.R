@@ -10,8 +10,8 @@ library(pbapply)
 
 CLOBBER = F ### don't do this unless you want it to run for a very long time
 
-doc_loc <- 'enepa_repository/documents/2023/'
-js_loc <- 'enepa_repository/reference_jsons/'
+doc_loc <- 'enepa_repository/box_files/documents/2023/'
+js_loc <- 'enepa_repository/box_files/reference_jsons/'
 if(!dir.exists(js_loc)){dir.create(js_loc)}
 fls <- list.files(doc_loc,full.names=T,recursive = T, pattern = 'pdf$|PDF$')
 
