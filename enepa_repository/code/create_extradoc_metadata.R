@@ -1,5 +1,5 @@
 require(data.table)
-dir = 'enepa_repository/documents/extra_docs/'
+dir = 'enepa_repository/box_files/documents/extra_docs/'
 fls = list.files(dir)
 
 file.rename(paste0(dir,fls),paste0(dir,gsub('\\s','_',fls)))

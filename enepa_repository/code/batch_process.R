@@ -6,16 +6,8 @@ source('enepa_repository/code/scrape_record_set.R')
 # code and metadata live on github, but corpus is too big
 # corpus lives in Box
 # this sets symlink so that files appear to live in same directory
-real_location = '~/Library/CloudStorage/Box-Box/eis_documents/enepa_repository/documents/'
-symbolic_location  = 'enepa_repository/'
-term_call <- paste0('ln -s ',real_location,' ',symbolic_location)
-system(term_call)
-
-#this does the same thing for text representations
-real_location = '~/Library/CloudStorage/Box-Box/eis_documents/enepa_repository/text_as_datatable/'
-symbolic_location  = 'enepa_repository/'
-term_call <- paste0('ln -s ',real_location,' ',symbolic_location)
-system(term_call)
+## Symlinks are now managed by setup_symlinks.sh
+## Run: bash setup_symlinks.sh
 
 
 #download observed docs not currently possessed

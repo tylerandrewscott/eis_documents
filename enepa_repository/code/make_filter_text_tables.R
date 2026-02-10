@@ -16,19 +16,19 @@ documents$File_Name <- gsub("[()&,~/ ]+", "_", documents$File_Name)
 documents$File_Name <- gsub("_+", "_", documents$File_Name)
 documents$File_Name <- gsub("\\.PDF$", ".pdf", documents$File_Name, ignore.case = TRUE)
 
-pdf_files = list.files('enepa_repository/documents/',full.names = T,recursive = T)
-txt_files = list.files('enepa_repository/text_as_datatable/',full.names = T,recursive = T)
+pdf_files = list.files('enepa_repository/box_files/documents/',full.names = T,recursive = T)
+txt_files = list.files('enepa_repository/box_files/text_as_datatable/',full.names = T,recursive = T)
 
 still_need = documents[!gsub('pdf$','txt',documents$File_Name) %in% basename(txt_files),]
 
-dr <- list.dirs('enepa_repository/documents')
+dr <- list.dirs('enepa_repository/box_files/documents')
 dr2 <- gsub('documents','text_as_datatable',dr)
 sapply(dr2[!dir.exists(dr2)],dir.create)
 still_need <- still_need[order(-ceqNumber),]
 for(i in 1:nrow(still_need)){
   pdf_name = grep(still_need$File_Name[i],pdf_files,value = T)
   print(pdf_name)
-  text_name = gsub('enepa_repository/documents','enepa_repository/text_as_datatable',pdf_name,fixed = T)
+  text_name = gsub('enepa_repository/box_files/documents','enepa_repository/box_files/text_as_datatable',pdf_name,fixed = T)
   text_name <- gsub('pdf$','txt',text_name)  
   temp_text = tryCatch({pdftools::pdf_text(grep(still_need$File_Name[i],pdf_files,value = T))},error = function(e) NULL)
   if(!is.null(temp_text) & length(temp_text)>0 & any(temp_text!='')){
@@ -66,9 +66,9 @@ for(i in 1:nrow(still_need)){
 # 
 # nms = colnames(fread(paste(have_pdf[1]$FILE_LOC,gsub('pdf$','txt',have_pdf$FILE_NAME[1]),sep = '/')))
 # 
-# floc = 'enepa_repository/documents/'
-# dir.create('enepa_repository/text_as_datatable')
-# tfloc = 'enepa_repository/text_as_datatable/'
+# floc = 'enepa_repository/box_files/documents/'
+# dir.create('enepa_repository/box_files/text_as_datatable')
+# tfloc = 'enepa_repository/box_files/text_as_datatable/'
 # docs = list.files(floc,recursive = T,full.names = T)
 # text_docs = list.files(tfloc,recursive = T,full.names = T)
 # 
@@ -82,21 +82,21 @@ for(i in 1:nrow(still_need)){
 # text_names = paste0(tfloc,'/',doc_record$subd,'/',gsub('PDF$|pdf$','txt',doc_record$File_Name))
 # 
 # 
-# flt = list.files('enepa_repository/text_as_datatable/',full.names = T,recursive = T)
+# flt = list.files('enepa_repository/box_files/text_as_datatable/',full.names = T,recursive = T)
 # finfo = file.info(flt)
 # 
 # library(lubridate)
 # old = month(ymd_hms(finfo$mtime))!=5
 # 
 # 
-# pdf_list = list.files('enepa_repository/documents/',recursive = T,full.names = T,pattern = '^202[0-9]|^201[3-9]|extra')
+# pdf_list = list.files('enepa_repository/box_files/documents/',recursive = T,full.names = T,pattern = '^202[0-9]|^201[3-9]|extra')
 # 
 # 
 # #pdf_list = pdf_list[grepl('^201[3-9]',basename(pdf_list))]
 # pdf_list = gsub('_{2,}','_',pdf_list)
 # 
 # 
-# text_list = list.files('enepa_repository/text_as_datatable/',recursive = T,full.names = T)
+# text_list = list.files('enepa_repository/box_files/text_as_datatable/',recursive = T,full.names = T)
 # text_list = text_list[grepl('^202[0-9]|^201[3-9]',basename(text_list))]
 # 
 # 
@@ -118,7 +118,7 @@ for(i in 1:nrow(still_need)){
 #   #i = which(documents$FILE_NAME=='41909_95853_FSPLT3_1658799.pdf')
 #   fname = docs_unconverted[i]
 #   
-#   tname = paste0('enepa_repository/text_as_datatable/',str_extract(basename(fname),'^[0-9]{4}'),'/',basename(fname))
+#   tname = paste0('enepa_repository/box_files/text_as_datatable/',str_extract(basename(fname),'^[0-9]{4}'),'/',basename(fname))
 #   tname = gsub('pdf$|PDF$','txt',tname)
 #     #if(file.exists(tname)){next}#temp = fread(tname);temp[,text:=NULL];all_page_dt = rbind(all_page_dt,temp,use.names=T,fill=T);next}
 #   print(i)

@@ -11,3 +11,11 @@
 **/.DS_Store
 *.md
 *.md
+
+# Symlinks to Box (created by setup_symlinks.sh)
+agency_nepa_libraries/blm/nepa_documents
+agency_nepa_libraries/doe/documents
+agency_nepa_libraries/doe/text_as_datatable
+agency_nepa_libraries/usfs/documents
+agency_nepa_libraries/usfs/text_as_datatable
+enepa_repository/box_files/

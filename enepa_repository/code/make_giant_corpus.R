@@ -5,7 +5,7 @@ have = sapply(packs,require,character.only=T)
 
 lapply(packs[!have],function(p) {install.packages(p);require(p,character.only = T)})
 
-flist = list.files('enepa_repository/text_as_datatable/',full.names = T,recursive = T)
+flist = list.files('enepa_repository/box_files/text_as_datatable/',full.names = T,recursive = T)
 flist_year = str_extract(basename(flist),'^[0-9]{4}')
 
 big_eis_text = data.table(Page = numeric(),text = character(),File = character())

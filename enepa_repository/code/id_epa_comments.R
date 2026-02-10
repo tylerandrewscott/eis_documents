@@ -9,7 +9,7 @@ packs = c('rvest','stringr','tidyverse','httr','data.table','RCurl')
 sapply(packs[!packs %in% installed.packages()[,'Package']],install.packages)
 sapply(packs,require,character.only = T)
 
-file_storage = 'enepa_repository/documents/'
+file_storage = 'enepa_repository/box_files/documents/'
 doc_file_name <- 'enepa_repository/metadata/eis_document_record.rds'
 record_df = readRDS('enepa_repository/metadata/eis_record_detail.rds')
 
@@ -40,7 +40,7 @@ current_flist = current_flist[not_empty]
 
 #record_df = record_df[YEAR %in% 2013:2019,]
 
-fls <- list.files('enepa_repository/documents/',recursive = T)
+fls <- list.files('enepa_repository/box_files/documents/',recursive = T)
 
 check_projs <- unique(str_extract(doc_df$File_Name[!doc_df$File_Name %in% basename(fls)],'^[0-9]{8}'))
 record_df = record_df[({!EIS.Number %in% doc_df$EIS.Number} | EIS.Number %in% check_projs) & YEAR>2012,]
