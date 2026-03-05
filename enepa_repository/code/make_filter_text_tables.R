@@ -24,6 +24,8 @@ still_need = documents[!gsub('pdf$','txt',documents$File_Name) %in% basename(txt
 dr <- list.dirs('enepa_repository/box_files/documents')
 dr2 <- gsub('documents','text_as_datatable',dr)
 sapply(dr2[!dir.exists(dr2)],dir.create)
+library(data.table)
+still_need <- data.table(still_need)
 still_need <- still_need[order(-ceqNumber),]
 for(i in 1:nrow(still_need)){
   pdf_name = grep(still_need$File_Name[i],pdf_files,value = T)
