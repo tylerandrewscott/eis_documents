@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Bash(ls:*)",
+      "Bash(wc:*)",
+      "Bash(python:*)",
+      "Bash(marker_single:*)",
+      "Bash(pip show:*)",
+      "Bash(conda list:*)",
+      "Bash(conda env:*)",
+      "Bash(conda info:*)",
+      "Bash(echo \"EXIT CODE: $?\")",
+      "Bash(/opt/miniconda3/envs/marker-env/bin/marker_single:*)"
+    ]
+  }
+}
