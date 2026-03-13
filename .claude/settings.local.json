@@ -11,7 +11,13 @@
       "Bash(conda env:*)",
       "Bash(conda info:*)",
       "Bash(echo \"EXIT CODE: $?\")",
-      "Bash(/opt/miniconda3/envs/marker-env/bin/marker_single:*)"
+      "Bash(/opt/miniconda3/envs/marker-env/bin/marker_single:*)",
+      "Read(//Users/tscott1/Library/CloudStorage/Box-Box/salinasbox/**)",
+      "Read(//Users/tscott1/Documents/GitHub/**)",
+      "Bash(curl:*)",
+      "Bash(ps aux:*)",
+      "Bash(pip install:*)",
+      "Bash(playwright install:*)"
     ]
   }
 }

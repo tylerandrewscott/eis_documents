@@ -3357,12 +3357,6 @@ attachmentId,ceqNumber,filename,downloaded,size,error,timestamp,eisId
 417261,,20230073_Harris_Reservoir_Expansion_Final_EIS_508.pdf,True,19223463,,2026-02-23T13:51:57.590553,417241.0
 417331,,20230073_Harris_Reservoir_Expansion_Final_EIS_Apps_A_B_C_and_G.pdf,True,101702043,,2026-02-23T13:52:27.149160,417241.0
 417203,,20230073_Harris_Reservoir_Expansion_Final_EIS_Apps_L_M_P_and_Q.pdf,True,99284059,,2026-02-23T13:52:58.045651,417241.0
-416211,,20230071_Vol_2_FMS_PTC_FEIS_January_2023_Part_2.pdf,False,0,500 Server Error:  for url: https://cdxapps.epa.gov/cdx-enepa-II/rest/public/v1/eis/document/download?attachmentId=416211,2026-02-23T13:53:03.822209,416160.0
-416212,,20230071_Vol_2_FMS_PTC_FEIS_January_2023_Part_1.pdf,False,0,500 Server Error:  for url: https://cdxapps.epa.gov/cdx-enepa-II/rest/public/v1/eis/document/download?attachmentId=416212,2026-02-23T13:53:09.776145,416160.0
-416213,,20230071_Vol_1_FMS_PTC_FEIS_January_2023.pdf,False,0,500 Server Error:  for url: https://cdxapps.epa.gov/cdx-enepa-II/rest/public/v1/eis/document/download?attachmentId=416213,2026-02-23T13:53:15.644945,416160.0
-402203,,20230054_4FRI_Rim_Country_Project_Final_Environmental_Impact_Statement_Volume_3.pdf,False,0,500 Server Error:  for url: https://cdxapps.epa.gov/cdx-enepa-II/rest/public/v1/eis/document/download?attachmentId=402203,2026-02-23T13:53:21.376557,402077.0
-402204,,20230054_4FRI_Rim_Country_Project_Final_Environmental_Impact_Statement_Volume_2.pdf,False,0,500 Server Error:  for url: https://cdxapps.epa.gov/cdx-enepa-II/rest/public/v1/eis/document/download?attachmentId=402204,2026-02-23T13:53:27.567057,402077.0
-402205,,20230054_4FRI_Rim_Country_Project_Final_Environmental_Impact_Statement_Volume_1.pdf,False,0,500 Server Error:  for url: https://cdxapps.epa.gov/cdx-enepa-II/rest/public/v1/eis/document/download?attachmentId=402205,2026-02-23T13:53:33.377706,402077.0
 403547,,20230056_NOAA_Restoration_Center_Final_PEIS.pdf,True,7259540,,2026-02-23T13:53:37.384678,403541.0
 400034,,20230043_Sentinel_GBSD_FEIS_-_Volume_I_Final_EIS_March_2023.pdf,True,101490172,,2026-02-23T13:54:11.534540,399981.0
 389352,,20230005_North_Dakota_Resource_Management_Plan_Revision_Volume_2_508.pdf,True,129919732,,2026-02-23T13:54:40.495137,389341.0
@@ -3431,25 +3425,17 @@ attachmentId,ceqNumber,filename,downloaded,size,error,timestamp,eisId
 281715,,20190236_Lake_Ralph_Hall_FEIS_Volume_II_Appendix_L_p1251-1280.pdf,True,45257388,,2026-02-23T14:12:58.631983,281656.0
 280649,,20190221_Chapter19_PublicHealthElderlyDisabilities_LongBridgeDEIS.pdf,True,542526,,2026-02-23T14:13:01.325754,280593.0
 269419,,20190048_ESCR_EIS_Chapter_5.4_Historic_and_Cultural_Resources.pdf,True,36692979,,2026-02-23T14:13:19.047379,268717.0
-260055,,20180251_Rebuild_By_Design_RBD_Meadowlands_Flood_Control_Project_FEIS_Appendices_F-G.pdf,False,0,Not a valid PDF (header: b'\r\n<ht'),2026-02-23T14:13:25.148766,259941.0
-259522,,20180240_AFTT_Final_EIS_OEIS_Volume_II.pdf,False,0,PDF has 0 pages,2026-02-23T14:13:38.319601,259367.0
-259524,,20180240_AFTT_Final_EIS_OEIS_Volume_III.pdf,False,0,PDF has 0 pages,2026-02-23T14:14:04.432058,259367.0
 257431,,20180211_21_-_Volume_II_-_Appendix_Q_Supplemental_-_Phase_I_Environmental_Site_Assessments.pdf,True,37302433,,2026-02-23T14:14:17.472273,257386.0
 251065,,20180126_Section_07_References_DRAFT_EIS.pdf,True,141147,,2026-02-23T14:14:19.820164,250996.0
 249158,,20180078_Appendix_K_-_Archeological_Report_and_Memo.pdf,True,20061287,,2026-02-23T14:14:35.083323,249129.0
 246734,,20180049_03_MPWSP_FEIR-EIS_ch8.5_508.pdf,True,34729485,,2026-02-23T14:14:44.284271,246664.0
 236604,,20170142_Final_SEIS_Land_Acquisition_and_Airspace_Establishment_to_Support_Large-Scale_Marine_Air_Ground_Task_Force_Live-Fire_Training_Marine_Corps_Combat_Center_Twentynine_Palms.pdf,True,44306534,,2026-02-23T14:15:02.133530,236599.0
-235415,,20170124_Appendix_02.pdf,False,0,PDF has 0 pages,2026-02-23T14:15:24.461346,235340.0
-235417,,20170124_Appendix_04.pdf,False,0,PDF has 0 pages,2026-02-23T14:15:32.067497,235340.0
-235433,,20170124_Appendix_21.pdf,False,0,PDF has 0 pages,2026-02-23T14:15:44.891941,235340.0
-235435,,20170124_Appendix_25.pdf,False,0,PDF has 0 pages,2026-02-23T14:15:53.588760,235340.0
 234988,,20170113_MVP_EEP_FEIS_Appendix_AA-_RTC_part_36of36.pdf,True,34049555,,2026-02-23T14:16:02.384989,234844.0
 232146,,20170077_01_UMC_Draft_ROD_04_27_2017.pdf,True,1212332,,2026-02-23T14:16:05.220340,232141.0
 228184,,20170025_Attachment_06_Hazardous_Waste_Screening_Technical_Environmental_Study_DEIS.pdf,True,25066824,,2026-02-23T14:16:12.468555,228061.0
 228174,,20170025_Attachment_05_Cultural_Resources_Technical_Environmental_Study_Vol_1b_DEIS.pdf,True,38379708,,2026-02-23T14:16:28.492753,228061.0
 228172,,20170025_Attachment_05_Cultural_Resources_Technical_Environmental_Study_Vol_1a_DEIS.pdf,True,31532657,,2026-02-23T14:16:41.193338,228061.0
 225898,,20160327_Final_SEIS_Land_Acquisition_and_Airspace_Establishment_to_Support_Large-Scale_Marine_Air_Ground_Task_Force_Live-Fire_Training_Marine_Corps_Combat_Center_Twentynine_Palms.pdf,True,44306534,,2026-02-23T14:16:51.878519,225892.0
-222313,,20160278_03_Chapter_3_Part_4_3.3_to_3.4.pdf,False,0,PDF has 0 pages,2026-02-23T14:17:04.918445,222256.0
 222353,,20160278_01_Title_Page_Volume_1C.pdf,True,152084,,2026-02-23T14:17:07.210675,222256.0
 222377,,20160278_K8d_Business_Letters_B26_to_B33.pdf,True,5923552,,2026-02-23T14:17:13.677514,222256.0
 220724,,20160262_Initial_Site_Assessment_Part_6.pdf,True,41737201,,2026-02-23T14:17:27.798518,220561.0
@@ -3459,78 +3445,10 @@ attachmentId,ceqNumber,filename,downloaded,size,error,timestamp,eisId
 213075,,20160182_Comment_Set_F4_-_Southern_California_Edison_-_Additional_Comments.pdf,True,20624939,,2026-02-23T14:17:45.936437,212944.0
 212486,,20160175_Chapter_2_PennEast_DEIS_Volume_II_Appendices_A-B.pdf,True,41681771,,2026-02-23T14:17:55.684861,212474.0
 211453,,20160157_Bangor_LWI-SPE_FEIS_Jul2016_VolTwo.pdf,True,40356963,,2026-02-23T14:18:09.947216,211444.0
-187738,,20160029_17_I-5_Corridor_Reinforcement_Project_Appendix_C_fSegment_Photomaps_pp_285-340.pdf,False,0,Empty file (0 bytes),2026-02-23T14:18:15.688745,187441.0
-187650,,20160029_3_I-5_Corridor_Reinforcement_Project_Volume_3A_Comment_Report.pdf,False,0,Empty file (0 bytes),2026-02-23T14:18:21.429387,187441.0
-187636,,20160029_1_I-5_Corridor_Reinforcement_Project_Volume_1.pdf,False,0,Empty file (0 bytes),2026-02-23T14:18:27.148494,187441.0
-187643,,20160029_2_I-5_Corridor_Reinforcement_Project_Volume_2.pdf,False,0,Empty file (0 bytes),2026-02-23T14:18:32.896578,187441.0
-187766,,20160029_18_I-5_Corridor_Reinforcement_Project_Appendix_C1_PA_Photomaps_pp_1-56.pdf,False,0,Empty file (0 bytes),2026-02-23T14:18:38.606494,187441.0
-187652,,20160029_4_I-5_Corridor_Reinforcement_Project_Volume_3B_Comment_Report.pdf,False,0,Empty file (0 bytes),2026-02-23T14:18:44.300402,187441.0
-187654,,20160029_5_I-5_Corridor_Reinforcement_Project_Volume_3C_Comment_Report.pdf,False,0,Empty file (0 bytes),2026-02-23T14:18:50.044863,187441.0
-187661,,20160029_6_I-5_Corridor_Reinforcement_Project_Volume_3D_Comment_Report.pdf,False,0,Empty file (0 bytes),2026-02-23T14:18:55.840581,187441.0
-187668,,20160029_7_I-5_Corridor_Reinforcement_Project_Volume_3E_Comment_Report.pdf,False,0,Empty file (0 bytes),2026-02-23T14:19:01.528501,187441.0
-187675,,20160029_8_I-5_Corridor_Reinforcement_Project_Volume_3F_Comment_Report.pdf,False,0,Empty file (0 bytes),2026-02-23T14:19:07.323816,187441.0
-187682,,20160029_9_I-5_Corridor_Reinforcement_Project_Volume_3G_Comment_Report.pdf,False,0,Empty file (0 bytes),2026-02-23T14:19:13.001059,187441.0
-187689,,20160029_10_I-5_Corridor_Reinforcement_Project_Volume_3H_Comment_Report.pdf,False,0,Empty file (0 bytes),2026-02-23T14:19:18.670585,187441.0
-187731,,20160029_16_I-5_Corridor_Reinforcement_Project_Appendix_C_eSegment_Photomaps_pp_228-284.pdf,False,0,Empty file (0 bytes),2026-02-23T14:19:24.469942,187441.0
-187768,,20160029_19_I-5_Corridor_Reinforcement_Project_Appendix_C1_PA_Photomaps_pp_57-113.pdf,False,0,Empty file (0 bytes),2026-02-23T14:19:30.237313,187441.0
-187770,,20160029_20_I-5_Corridor_Reinforcement_Project_Appendices_E_F_F1.pdf,False,0,Empty file (0 bytes),2026-02-23T14:19:36.028359,187441.0
-187777,,20160029_21_I-5_Corridor_Reinforcement_Project_Appendices_G_G1_H_I_K_L_M_N_O.pdf,False,0,Empty file (0 bytes),2026-02-23T14:19:41.761164,187441.0
-187779,,20160029_22_I-5_Corridor_Reinforcement_Project_Appendix_J.pdf,False,0,Empty file (0 bytes),2026-02-23T14:19:47.487060,187441.0
-187710,,20160029_13_I-5_Corridor_Reinforcement_Project_Appendix_C_bSegment_Photomaps_pp_57-113.pdf,False,0,Empty file (0 bytes),2026-02-23T14:19:53.144307,187441.0
-187703,,20160029_12_I-5_Corridor_Reinforcement_Project_Appendix_C_aSegment_Photomaps_pp_1-56.pdf,False,0,Empty file (0 bytes),2026-02-23T14:19:59.185730,187441.0
-187717,,20160029_14_I-5_Corridor_Reinforcement_Project_Appendix_C_cSegment_Photomaps_pp_114-170.pdf,False,0,Empty file (0 bytes),2026-02-23T14:20:04.896738,187441.0
-187696,,20160029_11_I-5_Corridor_Reinforcement_Project_Appendix_A_B_B1_D_D1.pdf,False,0,Empty file (0 bytes),2026-02-23T14:20:10.551497,187441.0
-185599,,20160012_02_Baton_Rouge_Loop_Tier_1_FEIS_Volume_2_Part_1_-_Appendix_A_thru_F.pdf,False,0,Empty file (0 bytes),2026-02-23T14:20:16.289351,185590.0
-185603,,20160012_04_Baton_Rouge_Loop_Tier_1_FEIS_Volume_2_Part_3_-_Appendix_G_subpart_B.pdf,False,0,Empty file (0 bytes),2026-02-23T14:20:21.994681,185590.0
-185605,,20160012_05_Baton_Rouge_Loop_Tier_1_FEIS_Volume_2_Part_4_-_Appendix_G_subpart_C.pdf,False,0,Empty file (0 bytes),2026-02-23T14:20:27.745182,185590.0
-185609,,20160012_07_Baton_Rouge_Loop_Tier_1_FEIS_Volume_2_Part_6_-_Appendix_K_subpart_A.pdf,False,0,Empty file (0 bytes),2026-02-23T14:20:33.505989,185590.0
-185611,,20160012_08_Baton_Rouge_Loop_Tier_1_FEIS_Volume_2_Part_7_-_Appendix_K_subpart_B.pdf,False,0,Empty file (0 bytes),2026-02-23T14:20:39.184010,185590.0
-185615,,20160012_10_Baton_Rouge_Loop_Tier_1_FEIS_Volume_3_Part_1_-_Chapter_2_Exhibits.pdf,False,0,Empty file (0 bytes),2026-02-23T14:20:44.901599,185590.0
-185617,,20160012_11_Baton_Rouge_Loop_Tier_1_FEIS_Volume_3_Part_2_-_Chapter_3_Exhibits.pdf,False,0,Empty file (0 bytes),2026-02-23T14:20:50.767788,185590.0
-185601,,20160012_03_Baton_Rouge_Loop_Tier_1_FEIS_Volume_2_Part_2_-_Appendix_G_subpart_A.pdf,False,0,Empty file (0 bytes),2026-02-23T14:20:56.512465,185590.0
-185607,,20160012_06_Baton_Rouge_Loop_Tier_1_FEIS_Volume_2_Part_5_-_Appendix_H_thru_J.pdf,False,0,Empty file (0 bytes),2026-02-23T14:21:02.222037,185590.0
-185613,,20160012_09_Baton_Rouge_Loop_Tier_1_FEIS_Volume_2_Part_8_-_Appendix_K-_subpart_C.pdf,False,0,Empty file (0 bytes),2026-02-23T14:21:08.031132,185590.0
-185619,,20160012_12_Baton_Rouge_Loop_Tier_1_FEIS_Volume_3_Part_3_-_Chapter_4_Exhibits.pdf,False,0,Empty file (0 bytes),2026-02-23T14:21:13.782460,185590.0
 183547,,20150336_Apndx_S_Pit_Lake_ERA.pdf,True,1613651,,2026-02-23T14:21:16.703691,183425.0
 183493,,20150336_Sec_3.26_Climate_Change.pdf,True,4210486,,2026-02-23T14:21:20.253457,183425.0
 182864,,20150321_NFECWellsFEIS.pdf,True,8600836,,2026-02-23T14:21:24.474931,182861.0
 180938,,20150306_SLT_FEIS_Appendix_F-6.pdf,True,31168121,,2026-02-23T14:21:33.348033,180883.0
-178847,,20150287_Appendix_1A_Notice_of_Intent.pdf,False,0,Empty file (0 bytes),2026-02-23T14:21:39.332671,178766.0
-178849,,20150287_Appendix_1C_Scoping_Meeting_Comments_and_Responses.pdf,False,0,Empty file (0 bytes),2026-02-23T14:21:45.130321,178766.0
-178851,,20150287_Appendix_3.2A_StLouisCitySite_Related_2009.pdf,False,0,Empty file (0 bytes),2026-02-23T14:21:50.823080,178766.0
-178855,,20150287_Appendix_3.2C_NRCS_Form_AD-1006_Farmland_Conversion_Impact_Rating.pdf,False,0,Empty file (0 bytes),2026-02-23T14:21:56.642047,178766.0
-178879,,20150287_Appendix_3.8A_Cultural_Resources_Technical_Reports.pdf,False,0,Empty file (0 bytes),2026-02-23T14:22:02.382669,178766.0
-178884,,20150287_Appendix_3.8B_Correspondence.pdf,False,0,Empty file (0 bytes),2026-02-23T14:22:08.342344,178766.0
-178898,,20150287_Appendix_4.6A_Solid_Waste_Calculation_Spreadsheets.pdf,False,0,Empty file (0 bytes),2026-02-23T14:22:14.208665,178766.0
-178900,,20150287_Appendix_4.15A_Cumulative_Solid_Waste_Calculations.pdf,False,0,Empty file (0 bytes),2026-02-23T14:22:20.121995,178766.0
-178904,,20150287_Appendix_1B_NGA_Scoping_Report.pdf,False,0,Empty file (0 bytes),2026-02-23T14:22:26.278175,178766.0
-178859,,20150287_Appendix_3.6A_Site_Assessments_2of4.pdf,False,0,Empty file (0 bytes),2026-02-23T14:22:32.169549,178766.0
-178857,,20150287_Appendix_3.6A_Site_Assessments_1of4.pdf,False,0,Empty file (0 bytes),2026-02-23T14:22:37.858471,178766.0
-178861,,20150287_Appendix_3.6A_Site_Assessments_4of4.pdf,False,0,Empty file (0 bytes),2026-02-23T14:22:43.553593,178766.0
-178863,,20150287_Appendix_3.6A_Site_Assessments_3of4a.pdf,False,0,Empty file (0 bytes),2026-02-23T14:22:49.255779,178766.0
-178870,,20150287_Appendix_3.6A_Site_Assessments_3of4c.pdf,False,0,Empty file (0 bytes),2026-02-23T14:22:54.957471,178766.0
-178874,,20150287_Appendix_3.6A_Site_Assessments_3of4d.pdf,False,0,Empty file (0 bytes),2026-02-23T14:23:00.697971,178766.0
-178876,,20150287_Appendix_3.6A_Site_Assessments_4of4.pdf,False,0,Empty file (0 bytes),2026-02-23T14:23:06.419953,178766.0
-178886,,20150287_Appendix_3.11A_Biological_Resource_Technical_Memorandum.pdf,False,0,Empty file (0 bytes),2026-02-23T14:23:12.135040,178766.0
-178888,,20150287_Appendix_3.11B_Federally_Listed_Species.pdf,False,0,Empty file (0 bytes),2026-02-23T14:23:17.844711,178766.0
-178890,,20150287_Appendix_3.11C_State-Listed_Species.pdf,False,0,Empty file (0 bytes),2026-02-23T14:23:23.572142,178766.0
-178892,,20150287_Appendix_3.11D_Bat_Study.pdf,False,0,Empty file (0 bytes),2026-02-23T14:23:29.350272,178766.0
-178894,,20150287_Appendix_3.13A_ACAM_Air_Emissions_Calculations.pdf,False,0,Empty file (0 bytes),2026-02-23T14:23:35.175532,178766.0
-178896,,20150287_Appendix_4.4A_NGA_Facility_Relocation_EIS_Traffic_Approach_TechMemo.pdf,False,0,Empty file (0 bytes),2026-02-23T14:23:40.973332,178766.0
-178902,,20150287_Appendix_5A_EJSCREEN_Tool_Analysis.pdf,False,0,Empty file (0 bytes),2026-02-23T14:23:46.810807,178766.0
-178865,,20150287_Appendix_3.6A_Site_Assessments_3of4b.pdf,False,0,Empty file (0 bytes),2026-02-23T14:23:52.682228,178766.0
-178853,,20150287_Appendix_3.2B_StLouisCitySite_Related_Land_Use_Docs_Since_2009.pdf,False,0,Empty file (0 bytes),2026-02-23T14:23:58.383451,178766.0
-177474,,20150273_Appendix_A3_Hillslope_Runoff_and_Hazard_Appendix.pdf,False,0,Empty file (0 bytes),2026-02-23T14:24:04.261065,177382.0
-177476,,20150273_Appendix_A4_HandH_Climate_Change_Scenarios.pdf,False,0,Empty file (0 bytes),2026-02-23T14:24:10.014614,177382.0
-177478,,20150273_AppendixB_Economics.pdf,False,0,Empty file (0 bytes),2026-02-23T14:24:15.787707,177382.0
-177480,,20150273_AppendixC_RealEstate.pdf,False,0,Empty file (0 bytes),2026-02-23T14:24:21.668177,177382.0
-177484,,20150273_AppendixE_Environmental_Regulatory.pdf,False,0,Empty file (0 bytes),2026-02-23T14:24:27.910426,177382.0
-177486,,20150273_AppendixF_CulturalResources.pdf,False,0,Empty file (0 bytes),2026-02-23T14:24:33.657065,177382.0
-177488,,20150273_AppendixG_PublicInvolvement.pdf,False,0,Empty file (0 bytes),2026-02-23T14:24:39.343679,177382.0
-177387,,20150273_AlaWai_DraftFeasibilityReportEIS_MainReport.pdf,False,0,Empty file (0 bytes),2026-02-23T14:24:45.055190,177382.0
-177472,,20150273_Appendix_A2_Plate_11_-_35_percent_Designs.pdf,False,0,Empty file (0 bytes),2026-02-23T14:24:50.771798,177382.0
-177482,,20150273_AppendixD_Cost.pdf,False,0,Empty file (0 bytes),2026-02-23T14:24:56.492660,177382.0
-177490,,20150273_Appendix_A2_with_Plates_1-10_Existing_Without-Project_Hydraulic_and_With-Project_Hydrologic_and_Hydraulic_Appendix_opt.pdf,False,0,Empty file (0 bytes),2026-02-23T14:25:02.229147,177382.0
 176666,,20150259_SEHSR_Richmond-Raleigh_Tier-II_FEIS_App_A_Agency_Coord.pdf,True,3883995,,2026-02-23T14:25:06.534215,176621.0
 176668,,20150259_SEHSR_Richmond-Raleigh_Tier-II_FEIS_App_B_Public_Invol.pdf,True,1196576,,2026-02-23T14:25:09.289814,176621.0
 176670,,20150259_SEHSR_Richmond-Raleigh_Tier-II_FEIS_App_C_Ridership_Rev.pdf,True,3530792,,2026-02-23T14:25:12.599181,176621.0
@@ -3565,99 +3483,17 @@ attachmentId,ceqNumber,filename,downloaded,size,error,timestamp,eisId
 176759,,20150260_Appendix_H_-_Comment_Letters_Part_2.pdf,True,47549722,,2026-02-23T14:27:16.392387,176748.0
 176761,,20150260_Appendix_H_-_Comment_Letters_Part_3_to_Appendix_O_-_Flow_and_Reservoir_Data.pdf,True,43001488,,2026-02-23T14:27:29.302397,176748.0
 184010,,20150261_20150261.pdf,True,48797,,2026-02-23T14:27:31.508340,176764.0
-175732,,20150243_AppA_ScopDocs.pdf,False,0,Corrupt PDF: Failed to open file '/Users/tscott1/Documents/GitHub/eis_documents/enepa_repository/box_files/documents/2015/20150243_AppA_ScopDocs.pdf'.,2026-02-23T14:27:45.850195,175700.0
-174876,,20150230_Table_of_Contents.pdf,False,0,PDF has 0 pages,2026-02-23T14:27:51.929814,174850.0
-173081,,20150202_Reference_FEIS_CEMVN_2012.pdf,False,0,Empty file (0 bytes),2026-02-23T14:27:57.683560,173074.0
-173085,,20150202_Reference_FEIS_Appendices_G-I_CEMVN_2012.pdf,False,0,Empty file (0 bytes),2026-02-23T14:28:03.479211,173074.0
-173094,,20150202_Reference_FEIS_Appendices_J-L_CEMVN_2012.pdf,False,0,Empty file (0 bytes),2026-02-23T14:28:09.276895,173074.0
-173083,,20150202_Reference_FEIS_Appendices_A-F_CEMVN_2012.pdf,False,0,Empty file (0 bytes),2026-02-23T14:28:15.005117,173074.0
 172826,,20150192_9_App_G_Comments_Part_3[1].pdf,True,50523033,,2026-02-23T14:28:27.172723,172796.0
-167133,,20150138_Map2.6_OHV_A_E.pdf,False,0,Empty file (0 bytes),2026-02-23T14:28:32.928844,167041.0
-167135,,20150138_Map2.7_TMA.pdf,False,0,Empty file (0 bytes),2026-02-23T14:28:38.756915,167041.0
-167137,,20150138_Map2.8_ROS.pdf,False,0,Empty file (0 bytes),2026-02-23T14:28:44.466159,167041.0
-167159,,20150138_MapE.1.pdf,False,0,Empty file (0 bytes),2026-02-23T14:28:50.178425,167041.0
-167161,,20150138_MapO.1.pdf,False,0,Empty file (0 bytes),2026-02-23T14:28:55.996975,167041.0
-167165,,20150138_W.0.pdf,False,0,Empty file (0 bytes),2026-02-23T14:29:01.694132,167041.0
-167167,,20150138_W.1.pdf,False,0,Empty file (0 bytes),2026-02-23T14:29:07.393359,167041.0
-167169,,20150138_W.2.pdf,False,0,Empty file (0 bytes),2026-02-23T14:29:13.157749,167041.0
-167171,,20150138_W.3.pdf,False,0,Empty file (0 bytes),2026-02-23T14:29:18.877979,167041.0
-167173,,20150138_W.4.pdf,False,0,Empty file (0 bytes),2026-02-23T14:29:24.734147,167041.0
-167175,,20150138_W.5.pdf,False,0,Empty file (0 bytes),2026-02-23T14:29:30.479163,167041.0
-167179,,20150138_W.7.pdf,False,0,Empty file (0 bytes),2026-02-23T14:29:36.163058,167041.0
-167181,,20150138_W.8.pdf,False,0,Empty file (0 bytes),2026-02-23T14:29:42.521096,167041.0
-167183,,20150138_W.9.pdf,False,0,Empty file (0 bytes),2026-02-23T14:29:48.194722,167041.0
-167185,,20150138_W.10.pdf,False,0,Empty file (0 bytes),2026-02-23T14:29:53.967057,167041.0
-167187,,20150138_W.11.pdf,False,0,Empty file (0 bytes),2026-02-23T14:29:59.702121,167041.0
-167189,,20150138_W.12.pdf,False,0,Empty file (0 bytes),2026-02-23T14:30:06.111858,167041.0
-167191,,20150138_W.13.pdf,False,0,Empty file (0 bytes),2026-02-23T14:30:12.028952,167041.0
-167051,,20150138_2_TitlePage_Abstract_Acronyms.pdf,False,0,Empty file (0 bytes),2026-02-23T14:30:17.734158,167041.0
-167053,,20150138_3_Executive_Summary_GRSG.pdf,False,0,Empty file (0 bytes),2026-02-23T14:30:23.516040,167041.0
-167055,,20150138_4_Contents.pdf,False,0,Empty file (0 bytes),2026-02-23T14:30:29.611628,167041.0
-167057,,20150138_5_Readers_Guide_and_Exec_Summary.pdf,False,0,Empty file (0 bytes),2026-02-23T14:30:35.387628,167041.0
-167059,,20150138_6_Chap1_Divider.pdf,False,0,Empty file (0 bytes),2026-02-23T14:30:41.092237,167041.0
-167061,,20150138_7_Chapter_1.pdf,False,0,Empty file (0 bytes),2026-02-23T14:30:46.999969,167041.0
-167063,,20150138_8_Chap2_Divider.pdf,False,0,Empty file (0 bytes),2026-02-23T14:30:52.777737,167041.0
-167065,,20150138_9_Chapter_2.pdf,False,0,Empty file (0 bytes),2026-02-23T14:30:58.525194,167041.0
-167067,,20150138_10_Chap3_Divider.pdf,False,0,Empty file (0 bytes),2026-02-23T14:31:04.291802,167041.0
-167069,,20150138_11_Chapter_3.pdf,False,0,Empty file (0 bytes),2026-02-23T14:31:10.058251,167041.0
-167071,,20150138_12_Chap4_Divider.pdf,False,0,Empty file (0 bytes),2026-02-23T14:31:15.777032,167041.0
-167073,,20150138_13_Chapter_4.pdf,False,0,Empty file (0 bytes),2026-02-23T14:31:21.576647,167041.0
-167075,,20150138_14_Chap5_Divider.pdf,False,0,Empty file (0 bytes),2026-02-23T14:31:27.312249,167041.0
-167077,,20150138_15_Chapter_5.pdf,False,0,Empty file (0 bytes),2026-02-23T14:31:33.040182,167041.0
-167079,,20150138_16_Bibliography.pdf,False,0,Empty file (0 bytes),2026-02-23T14:31:38.710925,167041.0
-167081,,20150138_17_Glossary.pdf,False,0,Empty file (0 bytes),2026-02-23T14:31:44.544108,167041.0
-167083,,20150138_18_Index.pdf,False,0,Empty file (0 bytes),2026-02-23T14:31:50.318363,167041.0
-167085,,20150138_Appendix_A_Implementation_Monitoring.pdf,False,0,Empty file (0 bytes),2026-02-23T14:31:56.027094,167041.0
-167089,,20150138_Appendix_C_Best_Management_Practices.pdf,False,0,Empty file (0 bytes),2026-02-23T14:32:01.805158,167041.0
-167091,,20150138_Appendix_D_Fire_and_ESR.pdf,False,0,Empty file (0 bytes),2026-02-23T14:32:07.713517,167041.0
-167093,,20150138_Appendix_E_Fluid_Minerals.pdf,False,0,Empty file (0 bytes),2026-02-23T14:32:13.446905,167041.0
-167095,,20150138_Appendix_F_Land_Ownership_Adjustment.pdf,False,0,Empty file (0 bytes),2026-02-23T14:32:19.353383,167041.0
-167099,,20150138_Appendix_H_Standards_Guidelines.pdf,False,0,Empty file (0 bytes),2026-02-23T14:32:25.163961,167041.0
-167101,,20150138_Appendix_I_Yearling_Conversion_Factors.pdf,False,0,Empty file (0 bytes),2026-02-23T14:32:30.916307,167041.0
-167103,,20150138_Appendix_J_Reclamation.pdf,False,0,Empty file (0 bytes),2026-02-23T14:32:36.701223,167041.0
-167105,,20150138_Appendix_K_ACEC_Evaluations.pdf,False,0,Empty file (0 bytes),2026-02-23T14:32:42.398720,167041.0
-167109,,20150138_Appendix_M_Greater_Sage-Grouse.pdf,False,0,Empty file (0 bytes),2026-02-23T14:32:48.143285,167041.0
-167111,,20150138_Appendix_N_Fish_and_Fisheries.pdf,False,0,Empty file (0 bytes),2026-02-23T14:32:53.867682,167041.0
-167113,,20150138_Appendix_O_Wind_Energy_RFD.pdf,False,0,Empty file (0 bytes),2026-02-23T14:32:59.647054,167041.0
-167115,,20150138_Appendix_P_Locatable_Minerals_RFD.pdf,False,0,Empty file (0 bytes),2026-02-23T14:33:05.370890,167041.0
-167119,,20150138_Appendix_R_Economic_Impact_Analysis_Methodology.pdf,False,0,Empty file (0 bytes),2026-02-23T14:33:11.256767,167041.0
-167121,,20150138_Appendix_S_Recreation_Management_Areas.pdf,False,0,Empty file (0 bytes),2026-02-23T14:33:17.063538,167041.0
-167125,,20150138_Map2.2_FluidMineralsA_B.pdf,False,0,Empty file (0 bytes),2026-02-23T14:33:24.432332,167041.0
-167127,,20150138_Map2.3_FluidMineralsC_D.pdf,False,0,Empty file (0 bytes),2026-02-23T14:33:30.406924,167041.0
-167129,,20150138_Map2.4_FluidMineralsE.pdf,False,0,Empty file (0 bytes),2026-02-23T14:33:36.230522,167041.0
-167131,,20150138_Map2.5_ROW.pdf,False,0,Empty file (0 bytes),2026-02-23T14:33:41.900727,167041.0
-167139,,20150138_Map2.9_RMA.pdf,False,0,Empty file (0 bytes),2026-02-23T14:33:47.555610,167041.0
-167141,,20150138_Map2.10_Recreation.pdf,False,0,Empty file (0 bytes),2026-02-23T14:33:53.412594,167041.0
-167143,,20150138_Map2.11_Wind.pdf,False,0,Empty file (0 bytes),2026-02-23T14:33:59.154064,167041.0
-167145,,20150138_Map2.12_Leasable_Solid_minerals.pdf,False,0,Empty file (0 bytes),2026-02-23T14:34:04.829111,167041.0
-167149,,20150138_Map2.14_Salable_Minerals.pdf,False,0,Empty file (0 bytes),2026-02-23T14:34:10.517046,167041.0
-167151,,20150138_Map2.15_ACECs.pdf,False,0,Empty file (0 bytes),2026-02-23T14:34:16.213550,167041.0
-167153,,20150138_Map2.16_VRM.pdf,False,0,Empty file (0 bytes),2026-02-23T14:34:22.529609,167041.0
-167155,,20150138_Map2.17_PPA_BC.pdf,False,0,Empty file (0 bytes),2026-02-23T14:34:29.437755,167041.0
-167157,,20150138_Map2.18_GRSG_Habitat_Mgmt_Areas_AltE.pdf,False,0,Empty file (0 bytes),2026-02-23T14:34:36.447728,167041.0
-167147,,20150138_Map2.13_Locatable_Solid_minerals.pdf,False,0,Empty file (0 bytes),2026-02-23T14:34:51.740832,167041.0
-167049,,20150138_1_Dear_Reader_Ltr_Signed.pdf,False,0,Empty file (0 bytes),2026-02-23T14:34:59.768860,167041.0
-167087,,20150138_Appendix_B_Air_Resource_Mgmt_Plan.pdf,False,0,Empty file (0 bytes),2026-02-23T14:35:05.560478,167041.0
-167097,,20150138_Appendix_G_Livestock_Allocations.pdf,False,0,Empty file (0 bytes),2026-02-23T14:35:11.352425,167041.0
-167107,,20150138_Appendix_L_Wild_Scenic_Rivers_Report.pdf,False,0,Empty file (0 bytes),2026-02-23T14:35:17.061035,167041.0
-167117,,20150138_Appendix_Q_Wildlife_Species.pdf,False,0,Empty file (0 bytes),2026-02-23T14:35:22.742556,167041.0
-167123,,20150138_Map2.1_FireManagementUnits.pdf,False,0,Empty file (0 bytes),2026-02-23T14:35:28.720910,167041.0
-167163,,20150138_MapP.1.pdf,False,0,Empty file (0 bytes),2026-02-23T14:35:34.542969,167041.0
 120485,,20150121_3-13_Recreation.pdf,True,4017250,,2026-02-23T14:35:37.941706,89330.0
 151778,,20150121_3-13_Recreation.pdf,True,4017250,,2026-02-23T14:35:41.450708,89330.0
-152042,,20150083_20150083.pdf,False,0,Empty file (0 bytes),2026-02-23T14:35:47.809584,89303.0
 118715,,20150067_1._Cover_-Title.pdf,True,230926,,2026-02-23T14:35:50.245993,89286.0
 118730,,20150067_Appendix_F-Resource_Use_Patterns.pdf,True,9096957,,2026-02-23T14:35:54.883483,89286.0
 151682,,20150067_1._Cover_-Title.pdf,True,230926,,2026-02-23T14:35:57.290125,89286.0
 151698,,20150067_Appendix_F-Resource_Use_Patterns.pdf,True,9096957,,2026-02-23T14:36:01.925006,89286.0
-152031,,20150058_20150058.pdf,False,0,Empty file (0 bytes),2026-02-23T14:36:08.413076,89276.0
 214670,,20140296_75th_St_CIP_FEIS_-_Chapter_3_-_Environmental_Resources_Impacts_and_Mitigation.pdf,True,16293184,,2026-02-23T14:36:13.928747,88380.0
 214675,,20140296_75th_St_CIP_FEIS_-_Appendix_A_-_Viaducts.pdf,True,1008907,,2026-02-23T14:36:16.621754,88380.0
 214694,,20140296_75th_St_CIP_FEIS_-_Appendix_H_-_Environmental_Resources_Documentation.pdf,True,3338851,,2026-02-23T14:36:19.968141,88380.0
 215370,,20140152_6_Appendix_S_Part_I.pdf,True,36688272,,2026-02-23T14:36:49.209176,88365.0
-104147,,20140147_Rim_Fire_Recovery_43033_Draft_Environmental_Impact_Statement_Map_Package.pdf,False,0,PDF has 0 pages,2026-02-23T14:36:56.766444,88354.0
-104189,,20140014_Appendix_A_Geographic_Information_Systems_Technical_Documentation_1113.pdf,False,0,PDF has 0 pages,2026-02-23T14:37:06.467646,87777.0
-104204,,20140014_Appendix_K_Section_106_Materials_and_Correspondence_Pt_2_of_9.pdf,False,0,PDF has 0 pages,2026-02-23T14:37:13.841395,87777.0
 118097,,20130302_Appendix_E_Project-Specific_Procedures.pdf,True,120064,,2026-02-23T14:37:16.315293,88034.0
 118098,,20130302_Appendix_F_SPCC_Plan.pdf,True,185145,,2026-02-23T14:37:18.779745,88034.0
 118099,,20130302_Appendix_G_Construction_Spill_Plans.pdf,True,360461,,2026-02-23T14:37:21.329220,88034.0
@@ -3670,25 +3506,199 @@ attachmentId,ceqNumber,filename,downloaded,size,error,timestamp,eisId
 118090,,20130302_Section_3.0_Alternatives.pdf,True,8372751,,2026-02-23T14:37:50.404753,88034.0
 118096,,20130302_Appendix_D_Erosion_Control_Reveg._Maint._Plan.pdf,True,149866,,2026-02-23T14:37:52.782473,88034.0
 118102,,20130302_Appendix_J_Geotechnical_Investigation.pdf,True,1624323,,2026-02-23T14:37:55.723832,88034.0
-104814,,20130272_Greens_Creek_FEIS_EPA_09_06_13.pdf,False,0,PDF has 0 pages,2026-02-23T14:38:06.670996,88199.0
 118841,,20130259_026_PurpleLine_FEIS_Vol-II_ConceptPlans_Part_3_of_6.pdf,True,31511976,,2026-02-23T14:38:17.046861,88285.0
-170887,,20130250_15Appendix_B_-_Cost_Engineering.pdf,False,0,PDF has 0 pages,2026-02-23T14:38:24.639630,87918.0
-170859,,20130206_ExecutiveSummary.pdf,False,0,PDF has 0 pages,2026-02-23T14:38:31.857047,87864.0
-171627,,20130206_Chapter01_ProjectPurposeandNeed.pdf,False,0,PDF has 0 pages,2026-02-23T14:38:39.102786,87864.0
-170991,,20130201_Alt1_Fsize.pdf,False,0,PDF has 0 pages,2026-02-23T14:39:03.727665,88188.0
-170854,,20130197_Everglades_Agricultural_Area_A-1_Shallow_FEB_Final_EIS_Appendix.pdf,False,0,PDF has 0 pages,2026-02-23T14:39:12.573281,87863.0
-170497,,20130162_Figure_M_04-1W.pdf,False,0,PDF has 0 pages,2026-02-23T14:39:30.660476,89028.0
-170504,,20130162_Figure_M_08-1E.pdf,False,0,PDF has 0 pages,2026-02-23T14:39:37.846997,89028.0
-170469,,20130079_Map_35_Potential_Fossil_Yield_Classification.pdf,False,0,Corrupt PDF: Failed to open file '/Users/tscott1/Documents/GitHub/eis_documents/enepa_repository/box_files/documents/2013/20130079_Map_35_Potential_Fossil_Yield_Classification.pdf'.,2026-02-23T14:39:58.213047,89020.0
 116290,,20130054_139_PrelimRMP_Map100_OG_Assessment_Units_2of3_11x17_port.pdf,True,874114,,2026-02-23T14:40:00.999847,88992.0
-170140,,20120372_207909main_Cx_PEIS_final.pdf,False,0,PDF has 0 pages,2026-02-23T14:40:33.517813,77717.0
-115160,,20120335_TUMSHCP-SDEIS_Chapter_1-2.pdf,False,0,PDF has 0 pages,2026-02-23T14:40:57.398731,88786.0
-115167,,20120335_TUMSHP-SDEIS_Vol_II_Comments_C.pdf,False,0,PDF has 0 pages,2026-02-23T14:44:05.361034,88786.0
-106840,,20120329_Chapter_8_-_Glossary.pdf,False,0,PDF has 0 pages,2026-02-23T14:44:29.335651,77716.0
-106852,,20120329_Appendix_12_-_ANILCA_Application.pdf,False,0,PDF has 0 pages,2026-02-23T14:44:36.979237,77716.0
-109017,,20120320_Appendix_F_Conceptual_Engineering_Drawings_Part_2.pdf,False,0,PDF has 0 pages,2026-02-23T14:44:44.109362,80708.0
-106376,,20110348_20110348.pdf,False,0,Not a valid PDF (header: b'\xd0\xcf\x11\xe0\xa1'),2026-02-23T14:44:59.963517,76653.0
-105584,,20080535_20080535.pdf,False,0,PDF has 0 pages,2026-02-23T14:45:55.714392,76289.0
 218805,,20030266_EPA_Region_3_draft_programmatic_EIS_-_Mountaintop_Mining_Valley_Fills_in_Appalachia_Appendix_G.pdf,True,38792265,,2026-02-23T14:46:05.691532,77245.0
 108791,,20010080_East_Side_Access_-_FEIS_2001.pdf,True,57746721,,2026-02-23T14:46:21.940090,80049.0
 108793,,20010080_East_Side_Access_FEIS_Reevaluations_and_Supporting_Documentation.pdf,True,44394270,,2026-02-23T14:46:30.592062,80049.0
+171225,,20140341_ATT22222,True,31655809,,2026-03-12T14:17:54.428255,89127.0
+113459,,20060241_06-039-AFS_GPRA_DEIS_Olympic_Natl_Forest_Weeds.doc,True,32768,,2026-03-12T14:21:03.130884,86201.0
+110120,,20060407_00-023-NPS_Ebeys_Landing_GPRA_form.doc,True,57856,,2026-03-12T14:21:05.362731,81497.0
+110053,,20050348_GPRA_309_Form_Ebeys_Landing_DEIS.doc,True,43520,,2026-03-12T14:21:07.559639,81316.0
+111288,,20040215_va_shlyay_309_Form.wpd,True,31662,,2026-03-12T14:21:09.936160,83187.0
+107721,,20040549_Maryland_ICC_Draft_EIS_letter_-_final_as_approved_by_Steve_Johnsons_office.wpd,True,260720,,2026-03-12T14:21:12.926979,79490.0
+111236,,20030211_gmecaroyaldiberville62603.wpd,True,19982,,2026-03-12T14:21:15.076680,83013.0
+111060,,20020080_deis_devils_lake_comments_020080.wpd,True,96295,,2026-03-12T14:21:17.284297,83396.0
+111059,,20020080_deis_devils_lake_020080.wpd,True,78335,,2026-03-12T14:21:19.588185,83396.0
+112633,,20010419_rays_valley_rd_realign_deis_10419.wpd,True,85066,,2026-03-12T14:21:21.841265,84856.0
+416211,,20230071_Vol_2_FMS_PTC_FEIS_January_2023_Part_2.pdf,False,0,500 Server Error:  for url: https://cdxapps.epa.gov/cdx-enepa-II/rest/public/v1/eis/document/download?attachmentId=416211,2026-03-12T15:04:26.177987,416160.0
+416212,,20230071_Vol_2_FMS_PTC_FEIS_January_2023_Part_1.pdf,False,0,500 Server Error:  for url: https://cdxapps.epa.gov/cdx-enepa-II/rest/public/v1/eis/document/download?attachmentId=416212,2026-03-12T15:04:33.300881,416160.0
+416213,,20230071_Vol_1_FMS_PTC_FEIS_January_2023.pdf,False,0,500 Server Error:  for url: https://cdxapps.epa.gov/cdx-enepa-II/rest/public/v1/eis/document/download?attachmentId=416213,2026-03-12T15:04:39.579690,416160.0
+402203,,20230054_4FRI_Rim_Country_Project_Final_Environmental_Impact_Statement_Volume_3.pdf,False,0,500 Server Error:  for url: https://cdxapps.epa.gov/cdx-enepa-II/rest/public/v1/eis/document/download?attachmentId=402203,2026-03-12T15:04:45.613685,402077.0
+402204,,20230054_4FRI_Rim_Country_Project_Final_Environmental_Impact_Statement_Volume_2.pdf,False,0,500 Server Error:  for url: https://cdxapps.epa.gov/cdx-enepa-II/rest/public/v1/eis/document/download?attachmentId=402204,2026-03-12T15:04:51.583690,402077.0
+402205,,20230054_4FRI_Rim_Country_Project_Final_Environmental_Impact_Statement_Volume_1.pdf,False,0,500 Server Error:  for url: https://cdxapps.epa.gov/cdx-enepa-II/rest/public/v1/eis/document/download?attachmentId=402205,2026-03-12T15:04:57.896876,402077.0
+260055,,20180251_Rebuild_By_Design_RBD_Meadowlands_Flood_Control_Project_FEIS_Appendices_F-G.pdf,False,0,Not a valid PDF (header: b'\r\n<ht'),2026-03-12T15:05:04.805559,259941.0
+259522,,20180240_AFTT_Final_EIS_OEIS_Volume_II.pdf,False,0,PDF has 0 pages,2026-03-12T15:05:28.616892,259367.0
+259524,,20180240_AFTT_Final_EIS_OEIS_Volume_III.pdf,False,0,PDF has 0 pages,2026-03-12T15:05:47.398281,259367.0
+235415,,20170124_Appendix_02.pdf,False,0,PDF has 0 pages,2026-03-12T15:06:10.490645,235340.0
+235417,,20170124_Appendix_04.pdf,False,0,PDF has 0 pages,2026-03-12T15:06:18.161031,235340.0
+235433,,20170124_Appendix_21.pdf,False,0,PDF has 0 pages,2026-03-12T15:06:27.559874,235340.0
+235435,,20170124_Appendix_25.pdf,False,0,PDF has 0 pages,2026-03-12T15:06:37.348870,235340.0
+222313,,20160278_03_Chapter_3_Part_4_3.3_to_3.4.pdf,False,0,PDF has 0 pages,2026-03-12T15:06:47.385504,222256.0
+187738,,20160029_17_I-5_Corridor_Reinforcement_Project_Appendix_C_fSegment_Photomaps_pp_285-340.pdf,False,0,Empty file (0 bytes),2026-03-12T15:06:53.302536,187441.0
+187650,,20160029_3_I-5_Corridor_Reinforcement_Project_Volume_3A_Comment_Report.pdf,False,0,Empty file (0 bytes),2026-03-12T15:06:59.615897,187441.0
+187636,,20160029_1_I-5_Corridor_Reinforcement_Project_Volume_1.pdf,False,0,Empty file (0 bytes),2026-03-12T15:07:05.708554,187441.0
+187643,,20160029_2_I-5_Corridor_Reinforcement_Project_Volume_2.pdf,False,0,Empty file (0 bytes),2026-03-12T15:07:12.074741,187441.0
+187766,,20160029_18_I-5_Corridor_Reinforcement_Project_Appendix_C1_PA_Photomaps_pp_1-56.pdf,False,0,Empty file (0 bytes),2026-03-12T15:07:18.138970,187441.0
+187652,,20160029_4_I-5_Corridor_Reinforcement_Project_Volume_3B_Comment_Report.pdf,False,0,Empty file (0 bytes),2026-03-12T15:07:24.266879,187441.0
+187654,,20160029_5_I-5_Corridor_Reinforcement_Project_Volume_3C_Comment_Report.pdf,False,0,Empty file (0 bytes),2026-03-12T15:07:30.294286,187441.0
+187661,,20160029_6_I-5_Corridor_Reinforcement_Project_Volume_3D_Comment_Report.pdf,False,0,Empty file (0 bytes),2026-03-12T15:07:36.313939,187441.0
+187668,,20160029_7_I-5_Corridor_Reinforcement_Project_Volume_3E_Comment_Report.pdf,False,0,Empty file (0 bytes),2026-03-12T15:07:42.325910,187441.0
+187675,,20160029_8_I-5_Corridor_Reinforcement_Project_Volume_3F_Comment_Report.pdf,False,0,Empty file (0 bytes),2026-03-12T15:07:48.668089,187441.0
+187682,,20160029_9_I-5_Corridor_Reinforcement_Project_Volume_3G_Comment_Report.pdf,False,0,Empty file (0 bytes),2026-03-12T15:07:54.814947,187441.0
+187689,,20160029_10_I-5_Corridor_Reinforcement_Project_Volume_3H_Comment_Report.pdf,False,0,Empty file (0 bytes),2026-03-12T15:08:00.957331,187441.0
+187731,,20160029_16_I-5_Corridor_Reinforcement_Project_Appendix_C_eSegment_Photomaps_pp_228-284.pdf,False,0,Empty file (0 bytes),2026-03-12T15:08:07.073082,187441.0
+187768,,20160029_19_I-5_Corridor_Reinforcement_Project_Appendix_C1_PA_Photomaps_pp_57-113.pdf,False,0,Empty file (0 bytes),2026-03-12T15:08:13.182102,187441.0
+187770,,20160029_20_I-5_Corridor_Reinforcement_Project_Appendices_E_F_F1.pdf,False,0,Empty file (0 bytes),2026-03-12T15:08:19.701777,187441.0
+187777,,20160029_21_I-5_Corridor_Reinforcement_Project_Appendices_G_G1_H_I_K_L_M_N_O.pdf,False,0,Empty file (0 bytes),2026-03-12T15:08:25.800815,187441.0
+187779,,20160029_22_I-5_Corridor_Reinforcement_Project_Appendix_J.pdf,False,0,Empty file (0 bytes),2026-03-12T15:08:32.032992,187441.0
+187710,,20160029_13_I-5_Corridor_Reinforcement_Project_Appendix_C_bSegment_Photomaps_pp_57-113.pdf,False,0,Empty file (0 bytes),2026-03-12T15:08:38.019562,187441.0
+187703,,20160029_12_I-5_Corridor_Reinforcement_Project_Appendix_C_aSegment_Photomaps_pp_1-56.pdf,False,0,Empty file (0 bytes),2026-03-12T15:08:44.101130,187441.0
+187717,,20160029_14_I-5_Corridor_Reinforcement_Project_Appendix_C_cSegment_Photomaps_pp_114-170.pdf,False,0,Empty file (0 bytes),2026-03-12T15:08:49.988452,187441.0
+187696,,20160029_11_I-5_Corridor_Reinforcement_Project_Appendix_A_B_B1_D_D1.pdf,False,0,Empty file (0 bytes),2026-03-12T15:08:56.357352,187441.0
+185599,,20160012_02_Baton_Rouge_Loop_Tier_1_FEIS_Volume_2_Part_1_-_Appendix_A_thru_F.pdf,False,0,Empty file (0 bytes),2026-03-12T15:09:02.315960,185590.0
+185603,,20160012_04_Baton_Rouge_Loop_Tier_1_FEIS_Volume_2_Part_3_-_Appendix_G_subpart_B.pdf,False,0,Empty file (0 bytes),2026-03-12T15:09:09.154764,185590.0
+185605,,20160012_05_Baton_Rouge_Loop_Tier_1_FEIS_Volume_2_Part_4_-_Appendix_G_subpart_C.pdf,False,0,Empty file (0 bytes),2026-03-12T15:09:15.970426,185590.0
+185609,,20160012_07_Baton_Rouge_Loop_Tier_1_FEIS_Volume_2_Part_6_-_Appendix_K_subpart_A.pdf,False,0,Empty file (0 bytes),2026-03-12T15:09:22.612514,185590.0
+185611,,20160012_08_Baton_Rouge_Loop_Tier_1_FEIS_Volume_2_Part_7_-_Appendix_K_subpart_B.pdf,False,0,Empty file (0 bytes),2026-03-12T15:09:28.468165,185590.0
+185615,,20160012_10_Baton_Rouge_Loop_Tier_1_FEIS_Volume_3_Part_1_-_Chapter_2_Exhibits.pdf,False,0,Empty file (0 bytes),2026-03-12T15:09:34.443761,185590.0
+185617,,20160012_11_Baton_Rouge_Loop_Tier_1_FEIS_Volume_3_Part_2_-_Chapter_3_Exhibits.pdf,False,0,Empty file (0 bytes),2026-03-12T15:09:40.436626,185590.0
+185601,,20160012_03_Baton_Rouge_Loop_Tier_1_FEIS_Volume_2_Part_2_-_Appendix_G_subpart_A.pdf,False,0,Empty file (0 bytes),2026-03-12T15:09:47.244383,185590.0
+185607,,20160012_06_Baton_Rouge_Loop_Tier_1_FEIS_Volume_2_Part_5_-_Appendix_H_thru_J.pdf,False,0,Empty file (0 bytes),2026-03-12T15:09:53.145938,185590.0
+185613,,20160012_09_Baton_Rouge_Loop_Tier_1_FEIS_Volume_2_Part_8_-_Appendix_K-_subpart_C.pdf,False,0,Empty file (0 bytes),2026-03-12T15:09:59.014040,185590.0
+185619,,20160012_12_Baton_Rouge_Loop_Tier_1_FEIS_Volume_3_Part_3_-_Chapter_4_Exhibits.pdf,False,0,Empty file (0 bytes),2026-03-12T15:10:04.886680,185590.0
+178847,,20150287_Appendix_1A_Notice_of_Intent.pdf,False,0,Empty file (0 bytes),2026-03-12T15:10:11.039552,178766.0
+178849,,20150287_Appendix_1C_Scoping_Meeting_Comments_and_Responses.pdf,False,0,Empty file (0 bytes),2026-03-12T15:10:16.954781,178766.0
+178851,,20150287_Appendix_3.2A_StLouisCitySite_Related_2009.pdf,False,0,Empty file (0 bytes),2026-03-12T15:10:22.876895,178766.0
+178855,,20150287_Appendix_3.2C_NRCS_Form_AD-1006_Farmland_Conversion_Impact_Rating.pdf,False,0,Empty file (0 bytes),2026-03-12T15:10:29.116554,178766.0
+178879,,20150287_Appendix_3.8A_Cultural_Resources_Technical_Reports.pdf,False,0,Empty file (0 bytes),2026-03-12T15:10:35.046855,178766.0
+178884,,20150287_Appendix_3.8B_Correspondence.pdf,False,0,Empty file (0 bytes),2026-03-12T15:10:41.147731,178766.0
+178898,,20150287_Appendix_4.6A_Solid_Waste_Calculation_Spreadsheets.pdf,False,0,Empty file (0 bytes),2026-03-12T15:10:47.161364,178766.0
+178900,,20150287_Appendix_4.15A_Cumulative_Solid_Waste_Calculations.pdf,False,0,Empty file (0 bytes),2026-03-12T15:10:53.133577,178766.0
+178904,,20150287_Appendix_1B_NGA_Scoping_Report.pdf,False,0,Empty file (0 bytes),2026-03-12T15:10:59.001610,178766.0
+178859,,20150287_Appendix_3.6A_Site_Assessments_2of4.pdf,False,0,Empty file (0 bytes),2026-03-12T15:11:05.121751,178766.0
+178857,,20150287_Appendix_3.6A_Site_Assessments_1of4.pdf,False,0,Empty file (0 bytes),2026-03-12T15:11:10.979984,178766.0
+178861,,20150287_Appendix_3.6A_Site_Assessments_4of4.pdf,False,0,Empty file (0 bytes),2026-03-12T15:11:16.936740,178766.0
+178863,,20150287_Appendix_3.6A_Site_Assessments_3of4a.pdf,False,0,Empty file (0 bytes),2026-03-12T15:11:22.876875,178766.0
+178870,,20150287_Appendix_3.6A_Site_Assessments_3of4c.pdf,False,0,Empty file (0 bytes),2026-03-12T15:11:28.783114,178766.0
+178874,,20150287_Appendix_3.6A_Site_Assessments_3of4d.pdf,False,0,Empty file (0 bytes),2026-03-12T15:11:34.610306,178766.0
+178876,,20150287_Appendix_3.6A_Site_Assessments_4of4.pdf,False,0,Empty file (0 bytes),2026-03-12T15:11:44.239395,178766.0
+178886,,20150287_Appendix_3.11A_Biological_Resource_Technical_Memorandum.pdf,False,0,Empty file (0 bytes),2026-03-12T15:11:50.356819,178766.0
+178888,,20150287_Appendix_3.11B_Federally_Listed_Species.pdf,False,0,Empty file (0 bytes),2026-03-12T15:11:56.992964,178766.0
+178890,,20150287_Appendix_3.11C_State-Listed_Species.pdf,False,0,Empty file (0 bytes),2026-03-12T15:12:03.330003,178766.0
+178892,,20150287_Appendix_3.11D_Bat_Study.pdf,False,0,Empty file (0 bytes),2026-03-12T15:12:09.450712,178766.0
+178894,,20150287_Appendix_3.13A_ACAM_Air_Emissions_Calculations.pdf,False,0,Empty file (0 bytes),2026-03-12T15:12:16.388357,178766.0
+178896,,20150287_Appendix_4.4A_NGA_Facility_Relocation_EIS_Traffic_Approach_TechMemo.pdf,False,0,Empty file (0 bytes),2026-03-12T15:12:22.428751,178766.0
+178902,,20150287_Appendix_5A_EJSCREEN_Tool_Analysis.pdf,False,0,Empty file (0 bytes),2026-03-12T15:12:28.451773,178766.0
+178865,,20150287_Appendix_3.6A_Site_Assessments_3of4b.pdf,False,0,Empty file (0 bytes),2026-03-12T15:12:34.345679,178766.0
+178853,,20150287_Appendix_3.2B_StLouisCitySite_Related_Land_Use_Docs_Since_2009.pdf,False,0,Empty file (0 bytes),2026-03-12T15:12:40.264118,178766.0
+177474,,20150273_Appendix_A3_Hillslope_Runoff_and_Hazard_Appendix.pdf,False,0,Empty file (0 bytes),2026-03-12T15:12:46.528742,177382.0
+177476,,20150273_Appendix_A4_HandH_Climate_Change_Scenarios.pdf,False,0,Empty file (0 bytes),2026-03-12T15:12:52.407390,177382.0
+177478,,20150273_AppendixB_Economics.pdf,False,0,Empty file (0 bytes),2026-03-12T15:12:58.324989,177382.0
+177480,,20150273_AppendixC_RealEstate.pdf,False,0,Empty file (0 bytes),2026-03-12T15:13:04.863477,177382.0
+177484,,20150273_AppendixE_Environmental_Regulatory.pdf,False,0,Empty file (0 bytes),2026-03-12T15:13:11.243718,177382.0
+177486,,20150273_AppendixF_CulturalResources.pdf,False,0,Empty file (0 bytes),2026-03-12T15:13:17.329880,177382.0
+177488,,20150273_AppendixG_PublicInvolvement.pdf,False,0,Empty file (0 bytes),2026-03-12T15:13:23.251185,177382.0
+177387,,20150273_AlaWai_DraftFeasibilityReportEIS_MainReport.pdf,False,0,Empty file (0 bytes),2026-03-12T15:13:29.152825,177382.0
+177472,,20150273_Appendix_A2_Plate_11_-_35_percent_Designs.pdf,False,0,Empty file (0 bytes),2026-03-12T15:13:35.178589,177382.0
+177482,,20150273_AppendixD_Cost.pdf,False,0,Empty file (0 bytes),2026-03-12T15:13:41.064847,177382.0
+177490,,20150273_Appendix_A2_with_Plates_1-10_Existing_Without-Project_Hydraulic_and_With-Project_Hydrologic_and_Hydraulic_Appendix_opt.pdf,False,0,Empty file (0 bytes),2026-03-12T15:13:47.019636,177382.0
+175732,,20150243_AppA_ScopDocs.pdf,False,0,Corrupt PDF: Failed to open file '/Users/tscott1/Documents/GitHub/eis_documents/enepa_repository/box_files/documents/2015/20150243_AppA_ScopDocs.pdf'.,2026-03-12T15:14:00.630562,175700.0
+174876,,20150230_Table_of_Contents.pdf,False,0,PDF has 0 pages,2026-03-12T15:14:06.920604,174850.0
+173081,,20150202_Reference_FEIS_CEMVN_2012.pdf,False,0,Empty file (0 bytes),2026-03-12T15:14:12.770172,173074.0
+173085,,20150202_Reference_FEIS_Appendices_G-I_CEMVN_2012.pdf,False,0,Empty file (0 bytes),2026-03-12T15:14:18.678321,173074.0
+173094,,20150202_Reference_FEIS_Appendices_J-L_CEMVN_2012.pdf,False,0,Empty file (0 bytes),2026-03-12T15:14:24.681143,173074.0
+173083,,20150202_Reference_FEIS_Appendices_A-F_CEMVN_2012.pdf,False,0,Empty file (0 bytes),2026-03-12T15:14:30.574608,173074.0
+167133,,20150138_Map2.6_OHV_A_E.pdf,False,0,Empty file (0 bytes),2026-03-12T15:14:36.853444,167041.0
+167135,,20150138_Map2.7_TMA.pdf,False,0,Empty file (0 bytes),2026-03-12T15:14:43.062991,167041.0
+167137,,20150138_Map2.8_ROS.pdf,False,0,Empty file (0 bytes),2026-03-12T15:14:49.105097,167041.0
+167159,,20150138_MapE.1.pdf,False,0,Empty file (0 bytes),2026-03-12T15:14:55.736756,167041.0
+167161,,20150138_MapO.1.pdf,False,0,Empty file (0 bytes),2026-03-12T15:15:01.653201,167041.0
+167165,,20150138_W.0.pdf,False,0,Empty file (0 bytes),2026-03-12T15:15:07.628480,167041.0
+167167,,20150138_W.1.pdf,False,0,Empty file (0 bytes),2026-03-12T15:15:13.793205,167041.0
+167169,,20150138_W.2.pdf,False,0,Empty file (0 bytes),2026-03-12T15:15:19.642594,167041.0
+167171,,20150138_W.3.pdf,False,0,Empty file (0 bytes),2026-03-12T15:15:25.498691,167041.0
+167173,,20150138_W.4.pdf,False,0,Empty file (0 bytes),2026-03-12T15:15:31.380214,167041.0
+167175,,20150138_W.5.pdf,False,0,Empty file (0 bytes),2026-03-12T15:15:37.299644,167041.0
+167179,,20150138_W.7.pdf,False,0,Empty file (0 bytes),2026-03-12T15:15:43.144402,167041.0
+167181,,20150138_W.8.pdf,False,0,Empty file (0 bytes),2026-03-12T15:15:49.120276,167041.0
+167183,,20150138_W.9.pdf,False,0,Empty file (0 bytes),2026-03-12T15:15:55.002649,167041.0
+167185,,20150138_W.10.pdf,False,0,Empty file (0 bytes),2026-03-12T15:16:01.235033,167041.0
+167187,,20150138_W.11.pdf,False,0,Empty file (0 bytes),2026-03-12T15:16:07.137991,167041.0
+167189,,20150138_W.12.pdf,False,0,Empty file (0 bytes),2026-03-12T15:16:13.212861,167041.0
+167191,,20150138_W.13.pdf,False,0,Empty file (0 bytes),2026-03-12T15:16:19.294441,167041.0
+167051,,20150138_2_TitlePage_Abstract_Acronyms.pdf,False,0,Empty file (0 bytes),2026-03-12T15:16:25.254780,167041.0
+167053,,20150138_3_Executive_Summary_GRSG.pdf,False,0,Empty file (0 bytes),2026-03-12T15:16:31.378924,167041.0
+167055,,20150138_4_Contents.pdf,False,0,Empty file (0 bytes),2026-03-12T15:16:37.314387,167041.0
+167057,,20150138_5_Readers_Guide_and_Exec_Summary.pdf,False,0,Empty file (0 bytes),2026-03-12T15:16:43.262076,167041.0
+167059,,20150138_6_Chap1_Divider.pdf,False,0,Empty file (0 bytes),2026-03-12T15:16:49.550627,167041.0
+167061,,20150138_7_Chapter_1.pdf,False,0,Empty file (0 bytes),2026-03-12T15:16:55.803052,167041.0
+167063,,20150138_8_Chap2_Divider.pdf,False,0,Empty file (0 bytes),2026-03-12T15:17:02.413684,167041.0
+167065,,20150138_9_Chapter_2.pdf,False,0,Empty file (0 bytes),2026-03-12T15:17:08.286728,167041.0
+167067,,20150138_10_Chap3_Divider.pdf,False,0,Empty file (0 bytes),2026-03-12T15:17:14.256325,167041.0
+167069,,20150138_11_Chapter_3.pdf,False,0,Empty file (0 bytes),2026-03-12T15:17:20.432060,167041.0
+167071,,20150138_12_Chap4_Divider.pdf,False,0,Empty file (0 bytes),2026-03-12T15:17:26.396232,167041.0
+167073,,20150138_13_Chapter_4.pdf,False,0,Empty file (0 bytes),2026-03-12T15:17:32.286071,167041.0
+167075,,20150138_14_Chap5_Divider.pdf,False,0,Empty file (0 bytes),2026-03-12T15:17:38.459571,167041.0
+167077,,20150138_15_Chapter_5.pdf,False,0,Empty file (0 bytes),2026-03-12T15:17:44.875243,167041.0
+167079,,20150138_16_Bibliography.pdf,False,0,Empty file (0 bytes),2026-03-12T15:17:50.758554,167041.0
+167081,,20150138_17_Glossary.pdf,False,0,Empty file (0 bytes),2026-03-12T15:17:56.852543,167041.0
+167083,,20150138_18_Index.pdf,False,0,Empty file (0 bytes),2026-03-12T15:18:02.682653,167041.0
+167085,,20150138_Appendix_A_Implementation_Monitoring.pdf,False,0,Empty file (0 bytes),2026-03-12T15:18:10.036321,167041.0
+167089,,20150138_Appendix_C_Best_Management_Practices.pdf,False,0,Empty file (0 bytes),2026-03-12T15:18:16.064577,167041.0
+167091,,20150138_Appendix_D_Fire_and_ESR.pdf,False,0,Empty file (0 bytes),2026-03-12T15:18:22.239085,167041.0
+167093,,20150138_Appendix_E_Fluid_Minerals.pdf,False,0,Empty file (0 bytes),2026-03-12T15:18:28.313656,167041.0
+167095,,20150138_Appendix_F_Land_Ownership_Adjustment.pdf,False,0,Empty file (0 bytes),2026-03-12T15:18:34.833744,167041.0
+167099,,20150138_Appendix_H_Standards_Guidelines.pdf,False,0,Empty file (0 bytes),2026-03-12T15:18:40.729132,167041.0
+167101,,20150138_Appendix_I_Yearling_Conversion_Factors.pdf,False,0,Empty file (0 bytes),2026-03-12T15:18:47.516783,167041.0
+167103,,20150138_Appendix_J_Reclamation.pdf,False,0,Empty file (0 bytes),2026-03-12T15:18:53.792401,167041.0
+167105,,20150138_Appendix_K_ACEC_Evaluations.pdf,False,0,Empty file (0 bytes),2026-03-12T15:18:59.896171,167041.0
+167109,,20150138_Appendix_M_Greater_Sage-Grouse.pdf,False,0,Empty file (0 bytes),2026-03-12T15:19:06.163810,167041.0
+167111,,20150138_Appendix_N_Fish_and_Fisheries.pdf,False,0,Empty file (0 bytes),2026-03-12T15:19:12.067461,167041.0
+167113,,20150138_Appendix_O_Wind_Energy_RFD.pdf,False,0,Empty file (0 bytes),2026-03-12T15:19:18.442829,167041.0
+167115,,20150138_Appendix_P_Locatable_Minerals_RFD.pdf,False,0,Empty file (0 bytes),2026-03-12T15:19:24.554106,167041.0
+167119,,20150138_Appendix_R_Economic_Impact_Analysis_Methodology.pdf,False,0,Empty file (0 bytes),2026-03-12T15:19:30.418164,167041.0
+167121,,20150138_Appendix_S_Recreation_Management_Areas.pdf,False,0,Empty file (0 bytes),2026-03-12T15:19:37.068481,167041.0
+167125,,20150138_Map2.2_FluidMineralsA_B.pdf,False,0,Empty file (0 bytes),2026-03-12T15:19:42.906035,167041.0
+167127,,20150138_Map2.3_FluidMineralsC_D.pdf,False,0,Empty file (0 bytes),2026-03-12T15:19:48.728423,167041.0
+167129,,20150138_Map2.4_FluidMineralsE.pdf,False,0,Empty file (0 bytes),2026-03-12T15:19:55.034626,167041.0
+167131,,20150138_Map2.5_ROW.pdf,False,0,Empty file (0 bytes),2026-03-12T15:20:00.969428,167041.0
+167139,,20150138_Map2.9_RMA.pdf,False,0,Empty file (0 bytes),2026-03-12T15:20:07.380206,167041.0
+167141,,20150138_Map2.10_Recreation.pdf,False,0,Empty file (0 bytes),2026-03-12T15:20:13.286170,167041.0
+167143,,20150138_Map2.11_Wind.pdf,False,0,Empty file (0 bytes),2026-03-12T15:20:19.661888,167041.0
+167145,,20150138_Map2.12_Leasable_Solid_minerals.pdf,False,0,Empty file (0 bytes),2026-03-12T15:20:25.579534,167041.0
+167149,,20150138_Map2.14_Salable_Minerals.pdf,False,0,Empty file (0 bytes),2026-03-12T15:20:31.501683,167041.0
+167151,,20150138_Map2.15_ACECs.pdf,False,0,Empty file (0 bytes),2026-03-12T15:20:37.378819,167041.0
+167153,,20150138_Map2.16_VRM.pdf,False,0,Empty file (0 bytes),2026-03-12T15:20:43.309606,167041.0
+167155,,20150138_Map2.17_PPA_BC.pdf,False,0,Empty file (0 bytes),2026-03-12T15:20:49.179685,167041.0
+167157,,20150138_Map2.18_GRSG_Habitat_Mgmt_Areas_AltE.pdf,False,0,Empty file (0 bytes),2026-03-12T15:20:55.386969,167041.0
+167147,,20150138_Map2.13_Locatable_Solid_minerals.pdf,False,0,Empty file (0 bytes),2026-03-12T15:21:01.251856,167041.0
+167049,,20150138_1_Dear_Reader_Ltr_Signed.pdf,False,0,Empty file (0 bytes),2026-03-12T15:21:07.122729,167041.0
+167087,,20150138_Appendix_B_Air_Resource_Mgmt_Plan.pdf,False,0,Empty file (0 bytes),2026-03-12T15:21:13.064679,167041.0
+167097,,20150138_Appendix_G_Livestock_Allocations.pdf,False,0,Empty file (0 bytes),2026-03-12T15:21:19.322650,167041.0
+167107,,20150138_Appendix_L_Wild_Scenic_Rivers_Report.pdf,False,0,Empty file (0 bytes),2026-03-12T15:21:25.301423,167041.0
+167117,,20150138_Appendix_Q_Wildlife_Species.pdf,False,0,Empty file (0 bytes),2026-03-12T15:21:33.300851,167041.0
+167123,,20150138_Map2.1_FireManagementUnits.pdf,False,0,Empty file (0 bytes),2026-03-12T15:21:39.720146,167041.0
+167163,,20150138_MapP.1.pdf,False,0,Empty file (0 bytes),2026-03-12T15:21:46.464390,167041.0
+152042,,20150083_20150083.pdf,False,0,Empty file (0 bytes),2026-03-12T15:21:52.899086,89303.0
+152031,,20150058_20150058.pdf,False,0,Empty file (0 bytes),2026-03-12T15:22:00.226213,89276.0
+104147,,20140147_Rim_Fire_Recovery_43033_Draft_Environmental_Impact_Statement_Map_Package.pdf,False,0,PDF has 0 pages,2026-03-12T15:22:08.049237,88354.0
+104189,,20140014_Appendix_A_Geographic_Information_Systems_Technical_Documentation_1113.pdf,False,0,PDF has 0 pages,2026-03-12T15:22:15.623908,87777.0
+104204,,20140014_Appendix_K_Section_106_Materials_and_Correspondence_Pt_2_of_9.pdf,False,0,PDF has 0 pages,2026-03-12T15:22:24.651979,87777.0
+104814,,20130272_Greens_Creek_FEIS_EPA_09_06_13.pdf,False,0,PDF has 0 pages,2026-03-12T15:22:32.092179,88199.0
+170887,,20130250_15Appendix_B_-_Cost_Engineering.pdf,False,0,PDF has 0 pages,2026-03-12T15:22:39.639595,87918.0
+170859,,20130206_ExecutiveSummary.pdf,False,0,PDF has 0 pages,2026-03-12T15:22:46.972118,87864.0
+171627,,20130206_Chapter01_ProjectPurposeandNeed.pdf,False,0,PDF has 0 pages,2026-03-12T15:22:54.479226,87864.0
+170991,,20130201_Alt1_Fsize.pdf,False,0,PDF has 0 pages,2026-03-12T15:23:01.756377,88188.0
+170854,,20130197_Everglades_Agricultural_Area_A-1_Shallow_FEB_Final_EIS_Appendix.pdf,False,0,PDF has 0 pages,2026-03-12T15:23:09.359854,87863.0
+170497,,20130162_Figure_M_04-1W.pdf,False,0,PDF has 0 pages,2026-03-12T15:23:16.850942,89028.0
+170504,,20130162_Figure_M_08-1E.pdf,False,0,PDF has 0 pages,2026-03-12T15:23:24.126675,89028.0
+170469,,20130079_Map_35_Potential_Fossil_Yield_Classification.pdf,False,0,Corrupt PDF: Failed to open file '/Users/tscott1/Documents/GitHub/eis_documents/enepa_repository/box_files/documents/2013/20130079_Map_35_Potential_Fossil_Yield_Classification.pdf'.,2026-03-12T15:23:31.442336,89020.0
+170140,,20120372_207909main_Cx_PEIS_final.pdf,False,0,PDF has 0 pages,2026-03-12T15:23:40.161809,77717.0
+115160,,20120335_TUMSHCP-SDEIS_Chapter_1-2.pdf,False,0,PDF has 0 pages,2026-03-12T15:23:47.612066,88786.0
+115167,,20120335_TUMSHP-SDEIS_Vol_II_Comments_C.pdf,False,0,PDF has 0 pages,2026-03-12T15:24:05.615212,88786.0
+106840,,20120329_Chapter_8_-_Glossary.pdf,False,0,PDF has 0 pages,2026-03-12T15:24:14.064900,77716.0
+106852,,20120329_Appendix_12_-_ANILCA_Application.pdf,False,0,PDF has 0 pages,2026-03-12T15:24:21.745982,77716.0
+109017,,20120320_Appendix_F_Conceptual_Engineering_Drawings_Part_2.pdf,False,0,PDF has 0 pages,2026-03-12T15:24:30.407092,80708.0
+106376,,20110348_20110348.pdf,False,0,Not a valid PDF (header: b'\xd0\xcf\x11\xe0\xa1'),2026-03-12T15:24:37.059235,76653.0
+105584,,20080535_20080535.pdf,False,0,PDF has 0 pages,2026-03-12T15:24:48.522345,76289.0

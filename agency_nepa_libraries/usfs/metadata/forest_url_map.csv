@@ -1,0 +1,111 @@
+region,forest_slug,forest_name,projects_url
+r01,beaverhead-deerlodge,Beaverhead-Deerlodge National Forest,https://www.fs.usda.gov/r01/beaverhead-deerlodge/projects
+r01,bitterroot,Bitterroot National Forest,https://www.fs.usda.gov/r01/bitterroot/projects
+r01,custergallatin,Custer Gallatin National Forest,https://www.fs.usda.gov/r01/custergallatin/projects
+r01,flathead,Flathead National Forest,https://www.fs.usda.gov/r01/flathead/projects
+r01,helena-lewisclark,Helena-Lewis and Clark National Forest,https://www.fs.usda.gov/r01/helena-lewisclark/projects
+r01,idahopanhandle,Idaho Panhandle National Forests,https://www.fs.usda.gov/r01/idahopanhandle/projects
+r01,kootenai,Kootenai National Forest,https://www.fs.usda.gov/r01/kootenai/projects
+r01,lolo,Lolo National Forest,https://www.fs.usda.gov/r01/lolo/projects
+r01,nezperce-clearwater,Nez Perce-Clearwater National Forests,https://www.fs.usda.gov/r01/nezperce-clearwater/projects
+r02,arp,Arapaho and Roosevelt National Forests & Pawnee National Grassland,https://www.fs.usda.gov/r02/arp/projects
+r02,bighorn,Bighorn National Forest,https://www.fs.usda.gov/r02/bighorn/projects
+r02,blackhills,Black Hills National Forest,https://www.fs.usda.gov/r02/blackhills/projects
+r02,gmug,"Grand Mesa, Uncompahgre and Gunnison National Forests",https://www.fs.usda.gov/r02/gmug/projects
+r02,mbrtb,Medicine Bow-Routt National Forests & Thunder Basin National Grassland,https://www.fs.usda.gov/r02/mbrtb/projects
+r02,nebraska,Nebraska National Forests and Grasslands,https://www.fs.usda.gov/r02/nebraska/projects
+r02,psicc,Pike-San Isabel National Forests & Cimarron and Comanche National Grasslands,https://www.fs.usda.gov/r02/psicc/projects
+r02,riogrande,Rio Grande National Forest,https://www.fs.usda.gov/r02/riogrande/projects
+r02,sanjuan,San Juan National Forest,https://www.fs.usda.gov/r02/sanjuan/projects
+r02,shoshone,Shoshone National Forest,https://www.fs.usda.gov/r02/shoshone/projects
+r02,whiteriver,White River National Forest,https://www.fs.usda.gov/r02/whiteriver/projects
+r03,apache-sitgreaves,Apache-Sitgreaves National Forests,https://www.fs.usda.gov/r03/apache-sitgreaves/projects
+r03,carson,Carson National Forest,https://www.fs.usda.gov/r03/carson/projects
+r03,cibola,Cibola National Forest and National Grasslands,https://www.fs.usda.gov/r03/cibola/projects
+r03,coconino,Coconino National Forest,https://www.fs.usda.gov/r03/coconino/projects
+r03,coronado,Coronado National Forest,https://www.fs.usda.gov/r03/coronado/projects
+r03,gila,Gila National Forest,https://www.fs.usda.gov/r03/gila/projects
+r03,kaibab,Kaibab National Forest,https://www.fs.usda.gov/r03/kaibab/projects
+r03,lincoln,Lincoln National Forest,https://www.fs.usda.gov/r03/lincoln/projects
+r03,prescott,Prescott National Forest,https://www.fs.usda.gov/r03/prescott/projects
+r03,santafe,Santa Fe National Forest,https://www.fs.usda.gov/r03/santafe/projects
+r03,tonto,Tonto National Forest,https://www.fs.usda.gov/r03/tonto/projects
+r04,ashley,Ashley National Forest,https://www.fs.usda.gov/r04/ashley/projects
+r04,boise,Boise National Forest,https://www.fs.usda.gov/r04/boise/projects
+r04,bridger-teton,Bridger-Teton National Forest,https://www.fs.usda.gov/r04/bridger-teton/projects
+r04,caribou-targhee,Caribou-Targhee National Forest,https://www.fs.usda.gov/r04/caribou-targhee/projects
+r04,dixie,Dixie National Forest,https://www.fs.usda.gov/r04/dixie/projects
+r04,fishlake,Fishlake National Forest,https://www.fs.usda.gov/r04/fishlake/projects
+r04,humboldt-toiyabe,Humboldt-Toiyabe National Forest,https://www.fs.usda.gov/r04/humboldt-toiyabe/projects
+r04,manti-lasal,Manti-La Sal National Forest,https://www.fs.usda.gov/r04/manti-lasal/projects
+r04,payette,Payette National Forest,https://www.fs.usda.gov/r04/payette/projects
+r04,salmon-challis,Salmon-Challis National Forest,https://www.fs.usda.gov/r04/salmon-challis/projects
+r04,sawtooth,Sawtooth National Forest,https://www.fs.usda.gov/r04/sawtooth/projects
+r04,uinta-wasatch-cache,Uinta-Wasatch-Cache National Forest,https://www.fs.usda.gov/r04/uinta-wasatch-cache/projects
+r05,angeles,Angeles National Forest,https://www.fs.usda.gov/r05/angeles/projects
+r05,cleveland,Cleveland National Forest,https://www.fs.usda.gov/r05/cleveland/projects
+r05,eldorado,Eldorado National Forest,https://www.fs.usda.gov/r05/eldorado/projects
+r05,inyo,Inyo National Forest,https://www.fs.usda.gov/r05/inyo/projects
+r05,klamath,Klamath National Forest & Butte Valley National Grassland,https://www.fs.usda.gov/r05/klamath/projects
+r05,laketahoebasin,Lake Tahoe Basin Management Unit,https://www.fs.usda.gov/r05/laketahoebasin/projects
+r05,lassen,Lassen National Forest,https://www.fs.usda.gov/r05/lassen/projects
+r05,lospadres,Los Padres National Forest,https://www.fs.usda.gov/r05/lospadres/projects
+r05,mendocino,Mendocino National Forest,https://www.fs.usda.gov/r05/mendocino/projects
+r05,modoc,Modoc National Forest,https://www.fs.usda.gov/r05/modoc/projects
+r05,plumas,Plumas National Forest,https://www.fs.usda.gov/r05/plumas/projects
+r05,sanbernardino,San Bernardino National Forest,https://www.fs.usda.gov/r05/sanbernardino/projects
+r05,sequoia,Sequoia National Forest,https://www.fs.usda.gov/r05/sequoia/projects
+r05,shasta-trinity,Shasta-Trinity National Forest,https://www.fs.usda.gov/r05/shasta-trinity/projects
+r05,sierra,Sierra National Forest,https://www.fs.usda.gov/r05/sierra/projects
+r05,sixrivers,Six Rivers National Forest,https://www.fs.usda.gov/r05/sixrivers/projects
+r05,stanislaus,Stanislaus National Forest,https://www.fs.usda.gov/r05/stanislaus/projects
+r05,tahoe,Tahoe National Forest,https://www.fs.usda.gov/r05/tahoe/projects
+r06,columbiarivergorge,Columbia River Gorge National Scenic Area,https://www.fs.usda.gov/r06/columbiarivergorge/projects
+r06,colville,Colville National Forest,https://www.fs.usda.gov/r06/colville/projects
+r06,deschutes,Deschutes National Forest,https://www.fs.usda.gov/r06/deschutes/projects
+r06,fremont-winema,Fremont-Winema National Forest,https://www.fs.usda.gov/r06/fremont-winema/projects
+r06,giffordpinchot,Gifford Pinchot National Forest,https://www.fs.usda.gov/r06/giffordpinchot/projects
+r06,malheur,Malheur National Forest,https://www.fs.usda.gov/r06/malheur/projects
+r06,mbs,Mount Baker-Snoqualmie National Forest,https://www.fs.usda.gov/r06/mbs/projects
+r06,mthood,Mt. Hood National Forest,https://www.fs.usda.gov/r06/mthood/projects
+r06,ochoco,Ochoco National Forest & Crooked River National Grassland,https://www.fs.usda.gov/r06/ochoco/projects
+r06,okanogan-wenatchee,Okanogan-Wenatchee National Forest,https://www.fs.usda.gov/r06/okanogan-wenatchee/projects
+r06,olympic,Olympic National Forest,https://www.fs.usda.gov/r06/olympic/projects
+r06,rogue-siskiyou,Rogue River-Siskiyou National Forest,https://www.fs.usda.gov/r06/rogue-siskiyou/projects
+r06,siuslaw,Siuslaw National Forest,https://www.fs.usda.gov/r06/siuslaw/projects
+r06,umatilla,Umatilla National Forest,https://www.fs.usda.gov/r06/umatilla/projects
+r06,umpqua,Umpqua National Forest,https://www.fs.usda.gov/r06/umpqua/projects
+r06,wallowa-whitman,Wallowa-Whitman National Forest,https://www.fs.usda.gov/r06/wallowa-whitman/projects
+r06,willamette,Willamette National Forest,https://www.fs.usda.gov/r06/willamette/projects
+r08,chattahoochee-oconee,Chattahoochee-Oconee National Forest,https://www.fs.usda.gov/r08/chattahoochee-oconee/projects
+r08,cherokee,Cherokee National Forest,https://www.fs.usda.gov/r08/cherokee/projects
+r08,danielboone,Daniel Boone National Forest,https://www.fs.usda.gov/r08/danielboone/projects
+r08,elyunque,El Yunque National Forest,https://www.fs.usda.gov/r08/elyunque/projects
+r08,francismarionsumter,Francis Marion and Sumter National Forests,https://www.fs.usda.gov/r08/francismarionsumter/projects
+r08,gwj,George Washington and Jefferson National Forests,https://www.fs.usda.gov/r08/gwj/projects
+r08,kisatchie,Kisatchie National Forest,https://www.fs.usda.gov/r08/kisatchie/projects
+r08,texas,National Forests and Grasslands in Texas,https://www.fs.usda.gov/r08/texas/projects
+r08,alabama,National Forests in Alabama,https://www.fs.usda.gov/r08/alabama/projects
+r08,florida,National Forests in Florida,https://www.fs.usda.gov/r08/florida/projects
+r08,mississippi,National Forests in Mississippi,https://www.fs.usda.gov/r08/mississippi/projects
+r08,northcarolina,National Forests in North Carolina,https://www.fs.usda.gov/r08/northcarolina/projects
+r08,ouachita,Ouachita National Forest,https://www.fs.usda.gov/r08/ouachita/projects
+r08,ozark-stfrancis,Ozark-St. Francis National Forest,https://www.fs.usda.gov/r08/ozark-stfrancis/projects
+r08,savannah-river,Savannah River,https://www.fs.usda.gov/r08/savannah-river/projects
+r09,allegheny,Allegheny National Forest,https://www.fs.usda.gov/r09/allegheny/projects
+r09,chequamegon-nicolet,Chequamegon-Nicolet National Forest,https://www.fs.usda.gov/r09/chequamegon-nicolet/projects
+r09,chippewa,Chippewa National Forest,https://www.fs.usda.gov/r09/chippewa/projects
+r09,gmfl,Green Mountain and Finger Lakes National Forests,https://www.fs.usda.gov/r09/gmfl/projects
+r09,hiawatha,Hiawatha National Forest,https://www.fs.usda.gov/r09/hiawatha/projects
+r09,hoosier,Hoosier National Forest,https://www.fs.usda.gov/r09/hoosier/projects
+r09,huron-manistee,Huron-Manistee National Forests,https://www.fs.usda.gov/r09/huron-manistee/projects
+r09,marktwain,Mark Twain National Forest,https://www.fs.usda.gov/r09/marktwain/projects
+r09,midewin,Midewin National Tallgrass Prairie,https://www.fs.usda.gov/r09/midewin/projects
+r09,monongahela,Monongahela National Forest,https://www.fs.usda.gov/r09/monongahela/projects
+r09,ottawa,Ottawa National Forest,https://www.fs.usda.gov/r09/ottawa/projects
+r09,shawnee,Shawnee National Forest,https://www.fs.usda.gov/r09/shawnee/projects
+r09,superior,Superior National Forest,https://www.fs.usda.gov/r09/superior/projects
+r09,wayne,Wayne National Forest,https://www.fs.usda.gov/r09/wayne/projects
+r09,whitemountain,White Mountain National Forest,https://www.fs.usda.gov/r09/whitemountain/projects
+r10,chugach,Chugach National Forest,https://www.fs.usda.gov/r10/chugach/projects
+r10,tongass,Tongass National Forest,https://www.fs.usda.gov/r10/tongass/projects
