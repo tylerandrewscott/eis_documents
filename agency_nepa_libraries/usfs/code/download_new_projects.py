@@ -3,38 +3,37 @@
 download_new_projects.py
 
 Downloads documents for new USFS projects (in usfs_new_projects.csv) from
-Box PinyonPublic using the Box API with OAuth2 credentials.
+Box PinyonPublic using Playwright to generate signed download URLs.
 
-Setup (one-time):
-  1. Go to https://developer.box.com → My Apps → Create New App
-  2. Choose Custom App → User Authentication (OAuth 2.0)
-  3. Under Configuration, set Redirect URI to: http://localhost
-  4. Copy Client ID and Client Secret into usfs/box_credentials.json:
-       {"client_id": "...", "client_secret": "..."}
-  5. Run this script — it will open a browser for authorization the first time.
+Strategy:
+  For each project, navigate to each subfolder's Box page, click the
+  "Download" button to generate a signed boxcloud.com ZIP URL, intercept
+  it before the browser downloads, then download the ZIP ourselves and
+  extract the files.
 
 Usage:
     python3 download_new_projects.py              # download all new projects
-    python3 download_new_projects.py --dry-run    # list files without downloading
-    python3 download_new_projects.py --limit 50   # process first N projects
+    python3 download_new_projects.py --dry-run    # list folders without downloading
+    python3 download_new_projects.py --limit 10   # process first N projects
 
-Safe to re-run: skips files already on disk; resumes interrupted downloads.
+Safe to re-run: skips projects already marked done in usfs_new_projects.csv.
 
 After running, run update_metadata.py to refresh the metadata CSVs.
 """
 
-import json
 import re
 import sys
 import time
+import zipfile
 import argparse
-import webbrowser
-import urllib.parse
+import tempfile
+import shutil
 from pathlib import Path
 
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
+from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -42,211 +41,199 @@ from bs4 import BeautifulSoup
 USFS_DIR      = Path(__file__).parent.parent
 META_DIR      = USFS_DIR / "metadata"
 DOCS_DIR      = USFS_DIR / "documents"
-CREDS_FILE    = USFS_DIR / "box_credentials.json"
-TOKEN_CACHE   = USFS_DIR / "box_token_cache.json"
 NEW_PROJ_FILE = META_DIR / "usfs_new_projects.csv"
 
 # ---------------------------------------------------------------------------
-# Box API config
+# Config
 # ---------------------------------------------------------------------------
-AUTH_URL  = "https://account.box.com/api/oauth2/authorize"
-TOKEN_URL = "https://api.box.com/oauth2/token"
-API_BASE  = "https://api.box.com/2.0"
-SHARED_LINK = "https://usfs-public.app.box.com/v/PinyonPublic"
+SCRAPE_DELAY   = 0.75
+DOWNLOAD_DELAY = 0.5
+CHUNK_SIZE     = 256 * 1024
 
-HEADERS_BASE = {
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    )
 }
 
-DOWNLOAD_DELAY = 0.5    # seconds between Box API calls
-SCRAPE_DELAY   = 0.75   # seconds between USFS page requests
-CHUNK_SIZE     = 256 * 1024  # 256 KB
-
-# File extensions to download
-DOWNLOAD_EXTS = {".pdf", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".txt"}
+BOX_BASE = "https://usfs-public.app.box.com"
 
 
 # ---------------------------------------------------------------------------
-# OAuth2 helpers
+# Helpers
 # ---------------------------------------------------------------------------
-def load_credentials() -> tuple[str, str]:
-    if not CREDS_FILE.exists():
-        print(f"Credentials file not found: {CREDS_FILE}")
-        print()
-        print("Create it with:")
-        print('  {"client_id": "YOUR_CLIENT_ID", "client_secret": "YOUR_CLIENT_SECRET"}')
-        print()
-        print("Get credentials at: https://developer.box.com → My Apps → Create New App")
-        print("  App type: Custom App → User Authentication (OAuth 2.0)")
-        print("  Redirect URI: http://localhost")
-        sys.exit(1)
-    with open(CREDS_FILE) as f:
-        creds = json.load(f)
-    return creds["client_id"], creds["client_secret"]
+def sanitize(name: str) -> str:
+    name = re.sub(r"[^\w\-. ]", "_", name)
+    return re.sub(r"_+", "_", name).strip("_. ")
 
 
-def save_tokens(tokens: dict) -> None:
-    with open(TOKEN_CACHE, "w") as f:
-        json.dump(tokens, f)
-
-
-def refresh_token(client_id: str, client_secret: str, refresh: str) -> dict | None:
-    r = requests.post(TOKEN_URL, data={
-        "grant_type":    "refresh_token",
-        "refresh_token": refresh,
-        "client_id":     client_id,
-        "client_secret": client_secret,
-    }, timeout=15)
-    if r.status_code == 200:
-        tokens = r.json()
-        save_tokens(tokens)
-        return tokens
-    return None
-
-
-def authorize(client_id: str, client_secret: str) -> str:
-    """Run OAuth2 authorization code flow. Returns access_token."""
-    auth_url = f"{AUTH_URL}?" + urllib.parse.urlencode({
-        "response_type": "code",
-        "client_id":     client_id,
-    })
-    print(f"\nOpening browser for Box authorization...")
-    print(f"If the browser doesn't open, visit:\n  {auth_url}\n")
-    webbrowser.open(auth_url)
-    print("After authorizing, you'll be redirected to http://localhost/?code=...")
-    print("(The page may show an error — that's fine.)")
-    redirect = input("Paste the full redirect URL here: ").strip()
-
-    qs = urllib.parse.parse_qs(urllib.parse.urlparse(redirect).query)
-    code = qs.get("code", [None])[0]
-    if not code:
-        print("No code found in URL. Exiting.")
-        sys.exit(1)
-
-    r = requests.post(TOKEN_URL, data={
-        "grant_type":    "authorization_code",
-        "code":          code,
-        "client_id":     client_id,
-        "client_secret": client_secret,
-    }, timeout=15)
-    r.raise_for_status()
-    tokens = r.json()
-    save_tokens(tokens)
-    print("Authorization successful. Token cached.")
-    return tokens["access_token"]
-
-
-def get_access_token(client_id: str, client_secret: str) -> str:
-    """Return a valid access token, refreshing or re-authorizing as needed."""
-    if TOKEN_CACHE.exists():
-        with open(TOKEN_CACHE) as f:
-            tokens = json.load(f)
-        if tokens.get("refresh_token"):
-            refreshed = refresh_token(client_id, client_secret, tokens["refresh_token"])
-            if refreshed:
-                return refreshed["access_token"]
-    return authorize(client_id, client_secret)
-
-
-# ---------------------------------------------------------------------------
-# Box API helpers
-# ---------------------------------------------------------------------------
-def box_headers(token: str) -> dict:
-    return {
-        "Authorization": f"Bearer {token}",
-        "BoxApi":        f"shared_link={SHARED_LINK}",
-    }
-
-
-def list_folder(folder_id: str, token: str, timeout: int = 20) -> list[dict]:
+def scrape_box_info(project_url: str) -> dict | None:
     """
-    Return all items in a Box folder (auto-paginates).
-    Each item: {"id", "name", "type", "size"}
+    Scrape USFS project page to extract Box folder info.
+    Returns {"folder_id": "...", "shared_token": "...", "folder_url": "..."}
+    or None if not found.
     """
-    items = []
-    url = f"{API_BASE}/folders/{folder_id}/items"
-    params = {"fields": "id,name,type,size", "limit": 1000, "offset": 0}
-
-    while True:
-        time.sleep(DOWNLOAD_DELAY)
-        r = requests.get(url, headers=box_headers(token), params=params, timeout=timeout)
-        if r.status_code == 401:
-            raise PermissionError("Box API returned 401 — token may have expired")
-        if r.status_code != 200:
-            raise RuntimeError(f"Box API {r.status_code}: {r.text[:200]}")
-        data = r.json()
-        items.extend(data.get("entries", []))
-        total = data.get("total_count", 0)
-        offset = data.get("offset", 0) + len(data.get("entries", []))
-        if offset >= total:
-            break
-        params["offset"] = offset
-
-    return items
-
-
-def list_folder_recursive(folder_id: str, token: str, depth: int = 0) -> list[dict]:
-    """Recursively list all files in a folder and its subfolders."""
-    if depth > 5:
-        return []
-    items = list_folder(folder_id, token)
-    files = []
-    for item in items:
-        if item["type"] == "file":
-            files.append(item)
-        elif item["type"] == "folder":
-            files.extend(list_folder_recursive(item["id"], token, depth + 1))
-    return files
-
-
-def download_file(file_id: str, dest: Path, token: str, timeout: int = 60) -> tuple[bool, str]:
-    """Download a Box file to dest. Returns (success, message)."""
-    url = f"{API_BASE}/files/{file_id}/content"
-    try:
-        time.sleep(DOWNLOAD_DELAY)
-        r = requests.get(url, headers=box_headers(token), stream=True, timeout=timeout)
-        if r.status_code != 200:
-            return False, f"HTTP {r.status_code}"
-        with open(dest, "wb") as f:
-            for chunk in r.iter_content(CHUNK_SIZE):
-                if chunk:
-                    f.write(chunk)
-        size = dest.stat().st_size
-        if size < 500:
-            dest.unlink()
-            return False, f"too small ({size} bytes)"
-        return True, f"{size:,} bytes"
-    except Exception as e:
-        if dest.exists():
-            dest.unlink()
-        return False, str(e)
-
-
-# ---------------------------------------------------------------------------
-# USFS page scraping
-# ---------------------------------------------------------------------------
-def scrape_box_folder_id(project_url: str) -> str | None:
-    """Scrape a USFS project page to extract the Box PinyonPublic folder ID."""
     try:
         time.sleep(SCRAPE_DELAY)
-        r = requests.get(project_url, headers=HEADERS_BASE, timeout=15)
+        r = requests.get(project_url, headers=HEADERS, timeout=15)
         if r.status_code != 200:
             return None
         soup = BeautifulSoup(r.text, "html.parser")
+
+        # Look for: embed iframe src (has /s/{token}) and folder link (has /folder/{id})
+        shared_token = None
+        folder_id    = None
+
+        # Embed iframe: /embed/s/{token}
+        for iframe in soup.find_all("iframe", src=True):
+            m = re.search(r"box\.com/embed/s/([a-z0-9]+)", iframe.get("src", ""))
+            if m:
+                shared_token = m.group(1)
+
+        # Pinyon folder link: /PinyonPublic/folder/{id}
         for a in soup.find_all("a", href=True):
             href = a.get("href", "")
             m = re.search(r"PinyonPublic/folder/(\d+)", href)
             if m:
-                return m.group(1)
-        return None
+                folder_id = m.group(1)
+
+        if not folder_id:
+            return None
+
+        if shared_token:
+            folder_url = f"{BOX_BASE}/s/{shared_token}/folder/{folder_id}"
+        else:
+            folder_url = f"{BOX_BASE}/v/PinyonPublic/folder/{folder_id}"
+
+        return {"folder_id": folder_id, "shared_token": shared_token or "", "folder_url": folder_url}
     except Exception:
         return None
 
 
-def sanitize_filename(name: str) -> str:
-    name = re.sub(r"[^\w\-. ]", "_", name)
-    name = re.sub(r"_+", "_", name).strip("_. ")
-    return name
+def get_subfolders(page, folder_url: str) -> list[dict]:
+    """
+    Navigate to a Box shared folder page and return list of subfolders.
+    Returns [{"name": ..., "id": ..., "url": ...}]
+    """
+    page.goto(folder_url, wait_until="networkidle", timeout=30000)
+    time.sleep(2)
+
+    subfolders = []
+    # Box renders folder names as links in the list view
+    body = page.inner_text("body")
+    links = page.query_selector_all("a[href]")
+    for a in links:
+        href = a.get_attribute("href") or ""
+        m = re.search(r"/s/[a-z0-9]+/folder/(\d+)$", href)
+        if m:
+            name = a.inner_text().strip()
+            folder_id = m.group(1)
+            subfolders.append({"name": name, "id": folder_id, "url": f"{BOX_BASE}{href}"})
+
+    return subfolders
+
+
+def list_files_in_folder(page, folder_url: str, folder_id: str) -> list[str]:
+    """Return list of filenames visible in a Box folder listing."""
+    page.goto(folder_url, wait_until="networkidle", timeout=30000)
+    time.sleep(2)
+    body = page.inner_text("body")
+    files = [l.strip() for l in body.split("\n")
+             if l.strip() and "." in l and
+             any(l.strip().lower().endswith(ext) for ext in
+                 [".pdf", ".doc", ".docx", ".xls", ".xlsx", ".ppt", ".pptx", ".txt"])]
+    return files
+
+
+def download_folder_as_zip(page, folder_url: str, folder_id: str) -> tuple[bool, str]:
+    """
+    Navigate to a Box folder, click Download, intercept the boxcloud URL,
+    then download the ZIP with requests.
+
+    Returns (success: bool, zip_path_or_error: str)
+    """
+    captured_url: list = []
+
+    def intercept(route):
+        captured_url.append(route.request.url)
+        route.abort()
+
+    page.route("**/dl.boxcloud.com/**", intercept)
+
+    try:
+        page.goto(folder_url, wait_until="networkidle", timeout=30000)
+        time.sleep(2)
+
+        # Hover over first file to reveal Download button
+        body = page.inner_text("body")
+        pdf_lines = [l.strip() for l in body.split("\n")
+                     if l.strip() and any(l.strip().lower().endswith(e)
+                                          for e in [".pdf", ".doc", ".docx", ".xls"])]
+
+        if pdf_lines:
+            try:
+                page.get_by_text(pdf_lines[0], exact=True).first.hover()
+                time.sleep(0.3)
+            except Exception:
+                pass
+
+        # Click the Download button
+        dl_btn = page.get_by_role("button", name="Download", exact=True).first
+        dl_btn.click()
+        page.wait_for_timeout(3000)
+
+    except PWTimeout:
+        return False, f"timeout navigating to {folder_url}"
+    except Exception as e:
+        return False, f"playwright error: {e}"
+    finally:
+        page.unroute("**/dl.boxcloud.com/**")
+
+    if not captured_url:
+        return False, "no download URL captured (folder may be empty or have no Download button)"
+
+    # Download the ZIP
+    url = captured_url[0]
+    try:
+        time.sleep(DOWNLOAD_DELAY)
+        r = requests.get(url, headers=HEADERS, stream=True, timeout=120)
+        if r.status_code != 200:
+            return False, f"HTTP {r.status_code}: {r.text[:100]}"
+        tmp = tempfile.mktemp(suffix=".zip")
+        with open(tmp, "wb") as f:
+            for chunk in r.iter_content(CHUNK_SIZE):
+                if chunk:
+                    f.write(chunk)
+        return True, tmp
+    except Exception as e:
+        return False, str(e)
+
+
+def extract_zip_to_dir(zip_path: str, dest_dir: Path, project_num: str) -> tuple[int, int]:
+    """
+    Extract a Box ZIP to dest_dir, prefixing filenames with {project_num}_.
+    Returns (extracted_count, skipped_count).
+    """
+    extracted = 0
+    skipped = 0
+    with zipfile.ZipFile(zip_path) as z:
+        for name in z.namelist():
+            # Box ZIPs use folder/filename structure
+            basename = Path(name).name
+            if not basename or not any(basename.lower().endswith(e)
+                                       for e in [".pdf", ".doc", ".docx", ".xls",
+                                                 ".xlsx", ".ppt", ".pptx", ".txt"]):
+                continue
+            dest_name = f"{project_num}_{sanitize(basename)}"
+            dest = dest_dir / dest_name
+            if dest.exists():
+                skipped += 1
+                continue
+            with z.open(name) as src, open(dest, "wb") as dst:
+                shutil.copyfileobj(src, dst)
+            extracted += 1
+    return extracted, skipped
 
 
 # ---------------------------------------------------------------------------
@@ -254,146 +241,130 @@ def sanitize_filename(name: str) -> str:
 # ---------------------------------------------------------------------------
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dry-run", action="store_true", help="List files only, no downloads")
+    parser.add_argument("--dry-run", action="store_true", help="List folders only")
     parser.add_argument("--limit",   type=int,            help="Max projects to process")
     args = parser.parse_args()
 
-    # Load credentials and get token
-    client_id, client_secret = load_credentials()
-    if not args.dry_run:
-        print("Authenticating with Box API...")
-        token = get_access_token(client_id, client_secret)
-        print("Authenticated.\n")
-    else:
-        token = None
-
-    # Load project list
     if not NEW_PROJ_FILE.exists():
         print(f"Not found: {NEW_PROJ_FILE}")
         print("Run update_metadata.py first.")
         sys.exit(1)
 
     projects = pd.read_csv(NEW_PROJ_FILE, dtype=str)
-    if "box_folder_id" not in projects.columns:
-        projects["box_folder_id"] = None
-    if "download_status" not in projects.columns:
-        projects["download_status"] = "pending"
+    if "box_folder_id"   not in projects.columns: projects["box_folder_id"]   = ""
+    if "box_folder_url"  not in projects.columns: projects["box_folder_url"]  = ""
+    if "download_status" not in projects.columns: projects["download_status"] = "pending"
 
-    # Skip already done
     todo = projects[~projects["download_status"].isin(["done", "skip"])].copy()
     if args.limit:
         todo = todo.head(args.limit)
 
     print(f"Projects to process: {len(todo):,}")
-    print(f"Mode: {'DRY RUN' if args.dry_run else 'DOWNLOAD'}")
-    print()
+    print(f"Mode: {'DRY RUN' if args.dry_run else 'DOWNLOAD'}\n")
 
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
-    total_downloaded = 0
-    total_skipped    = 0
-    total_failed     = 0
 
-    for i, (idx, row) in enumerate(todo.iterrows(), 1):
-        pnum   = str(row["project_num"]).strip()
-        title  = str(row.get("title", "")).strip()
-        p_url  = str(row.get("project_url", "")).strip()
-        folder = str(row.get("box_folder_id", "")).strip() if pd.notna(row.get("box_folder_id")) else ""
+    total_extracted = total_skipped = total_failed = 0
 
-        print(f"[{i}/{len(todo)}] #{pnum} {title[:60]}")
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch(headless=True)
+        context = browser.new_context()
+        page    = context.new_page()
 
-        # Step 1: get Box folder ID if missing
-        if not folder and p_url:
-            print(f"  scraping project page...")
-            folder = scrape_box_folder_id(p_url) or ""
-            if folder:
-                projects.at[idx, "box_folder_id"] = folder
-                print(f"  folder: {folder}")
-            else:
-                print(f"  no Box folder found — skipping")
+        for i, (idx, row) in enumerate(todo.iterrows(), 1):
+            pnum   = str(row["project_num"]).strip()
+            title  = str(row.get("title", "")).strip()
+            p_url  = str(row.get("project_url", "")).strip()
+
+            # Treat pandas NaN / literal "nan" as empty
+            def _val(col):
+                v = row.get(col, "")
+                return "" if (pd.isna(v) or str(v).strip().lower() == "nan") else str(v).strip()
+
+            folder     = _val("box_folder_id")
+            folder_url = _val("box_folder_url")
+
+            print(f"[{i}/{len(todo)}] #{pnum} {title[:60]}")
+
+            # Step 1: scrape project page if we don't have a valid folder URL yet
+            if (not folder or not folder_url) and p_url:
+                info = scrape_box_info(p_url)
+                if info:
+                    folder     = info["folder_id"]
+                    folder_url = info["folder_url"]
+                    projects.at[idx, "box_folder_id"]  = folder
+                    projects.at[idx, "box_folder_url"] = folder_url
+                    print(f"  folder URL: {folder_url}")
+                else:
+                    print(f"  no Box folder found — skipping")
+                    projects.at[idx, "download_status"] = "skip"
+                    projects.to_csv(NEW_PROJ_FILE, index=False)
+                    continue
+
+            if not folder_url:
+                print(f"  no folder URL — skipping")
                 projects.at[idx, "download_status"] = "skip"
-                # Save checkpoint
-                projects.to_csv(NEW_PROJ_FILE, index=False)
                 continue
 
-        # Step 2: determine year folder
-        year = str(row.get("year", "")).strip()
-        if not year or year == "nan":
-            # Try to parse from project URL (project pages sometimes have a date)
-            # Fall back to "new" subdirectory
-            year = "new"
-        year_dir = DOCS_DIR / year
-        year_dir.mkdir(exist_ok=True)
+            # Destination directory
+            year_dir = DOCS_DIR / "new"
+            year_dir.mkdir(exist_ok=True)
 
-        # Step 3: list Box folder files
-        if args.dry_run:
-            print(f"  [dry-run] would list Box folder {folder}")
-            continue
+            if args.dry_run:
+                print(f"  [dry-run] would download from {folder_url}")
+                continue
 
-        try:
-            files = list_folder_recursive(folder, token)
-        except PermissionError:
-            print("  Token expired — re-authenticating...")
-            token = get_access_token(client_id, client_secret)
+            # Step 2: find all subfolders + root folder to download
+            print(f"  listing subfolders...")
             try:
-                files = list_folder_recursive(folder, token)
+                page.goto(folder_url, wait_until="networkidle", timeout=30000)
+                time.sleep(2)
+                subfolders = get_subfolders(page, folder_url)
+                print(f"  {len(subfolders)} subfolders")
             except Exception as e:
-                print(f"  ERROR listing folder: {e}")
+                print(f"  ERROR listing subfolders: {e}")
                 projects.at[idx, "download_status"] = "failed"
                 total_failed += 1
                 continue
-        except Exception as e:
-            print(f"  ERROR listing folder: {e}")
-            projects.at[idx, "download_status"] = "failed"
-            total_failed += 1
-            continue
 
-        # Step 4: filter to downloadable file types
-        downloadable = [
-            f for f in files
-            if Path(f["name"]).suffix.lower() in DOWNLOAD_EXTS
-        ]
-        print(f"  {len(files)} files in folder, {len(downloadable)} downloadable")
+            # Download each subfolder (and the root folder itself)
+            folders_to_download = [{"name": "root", "id": folder, "url": folder_url}] + subfolders
+            proj_extracted = proj_skipped = proj_failed = 0
 
-        project_downloaded = 0
-        project_skipped    = 0
-        project_failed     = 0
+            for sf in folders_to_download:
+                sf_url = sf["url"]
+                print(f"  downloading folder: {sf['name']}")
+                ok, result = download_folder_as_zip(page, sf_url, sf["id"])
+                if ok:
+                    extracted, skipped = extract_zip_to_dir(result, year_dir, pnum)
+                    import os
+                    os.unlink(result)
+                    print(f"    extracted {extracted}, skipped {skipped}")
+                    proj_extracted += extracted
+                    proj_skipped   += skipped
+                else:
+                    print(f"    FAILED: {result}")
+                    proj_failed += 1
 
-        for box_file in downloadable:
-            safe_name = sanitize_filename(box_file["name"])
-            dest_name = f"{pnum}_{safe_name}"
-            dest = year_dir / dest_name
+            total_extracted += proj_extracted
+            total_skipped   += proj_skipped
+            total_failed    += proj_failed
 
-            if dest.exists():
-                project_skipped += 1
-                continue
+            status = "done" if proj_failed == 0 else ("partial" if proj_extracted > 0 else "failed")
+            projects.at[idx, "download_status"] = status
+            print(f"  → {proj_extracted} new, {proj_skipped} skipped, {proj_failed} failed subfolder(s)")
 
-            ok, msg = download_file(box_file["id"], dest, token)
-            if ok:
-                print(f"    + {dest_name} ({msg})")
-                project_downloaded += 1
-            else:
-                print(f"    FAILED {safe_name}: {msg}")
-                project_failed += 1
+            if i % 10 == 0:
+                projects.to_csv(NEW_PROJ_FILE, index=False)
 
-        total_downloaded += project_downloaded
-        total_skipped    += project_skipped
-        total_failed     += project_failed
+        browser.close()
 
-        status = "done" if project_failed == 0 else "partial"
-        projects.at[idx, "download_status"] = status
-        print(f"  done: {project_downloaded} new, {project_skipped} skipped, {project_failed} failed")
-
-        # Save checkpoint every 10 projects
-        if i % 10 == 0:
-            projects.to_csv(NEW_PROJ_FILE, index=False)
-
-    # Final save
     projects.to_csv(NEW_PROJ_FILE, index=False)
 
     print(f"\n{'='*50}")
-    print(f"Total downloaded: {total_downloaded:,}")
-    print(f"Total skipped:    {total_skipped:,}")
-    print(f"Total failed:     {total_failed:,}")
+    print(f"Files extracted: {total_extracted:,}")
+    print(f"Files skipped:   {total_skipped:,}")
+    print(f"Folders failed:  {total_failed:,}")
     print(f"\nRun update_metadata.py to refresh metadata CSVs.")
 
 
